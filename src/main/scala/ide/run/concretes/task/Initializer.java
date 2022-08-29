@@ -1,4 +1,4 @@
-package az.rock.ide.core.concretes.task;
+package az.rock.ide.run.concretes.task;
 
 @FunctionalInterface
 public interface Initializer {

@@ -10,8 +10,8 @@ import java.awt.*;
 import java.util.stream.IntStream;
 
 public class SplashGScreen extends GSplashFrame {
-    private final Image image = ImageProvider.getImage("src/main/java/az/rock/ide/view/ui/icon/png/RR.png",new Dimension(50,50));
-    private final PicPanel mainPanel = new PicPanel("src/main/java/az/rock/ide/view/ui/icon/png/splash.png");
+    private final Image image = ImageProvider.getImage("src/main/scala/ide/view/ui/icon/png/RR.png",new Dimension(50,50));
+    private final PicPanel mainPanel = new PicPanel("src/main/scala/ide/view/ui/icon/png/splash.png");
     private JProgressBar jProgressBar = new JProgressBar();
 
     private final Runnable progressRunnable =  ()->{

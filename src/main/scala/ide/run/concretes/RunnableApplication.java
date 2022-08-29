@@ -1,11 +1,12 @@
-package az.rock.ide.core.concretes;
+package az.rock.ide.run.concretes;
 
-import az.rock.ide.core.abstracts.RockApplication;
+import az.rock.ide.run.abstracts.RockApplication;
 import az.rock.ide.view.page.lib.frame.Compiler;
 import az.rock.ide.view.page.screen.main.MainGScreen;
 import az.rock.ide.view.page.screen.SplashGScreen;
 import az.rock.ide.view.ui.factory.abstracts.AbstractScreenFactory;
 import az.rock.ide.view.ui.factory.concretes.ScreenFactory;
+import com.formdev.flatlaf.FlatDarculaLaf;
 
 import javax.swing.*;
 import java.util.ArrayList;

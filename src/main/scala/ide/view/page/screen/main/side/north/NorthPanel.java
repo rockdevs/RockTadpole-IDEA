@@ -1,10 +1,8 @@
 package az.rock.ide.view.page.screen.main.side.north;
 
-import az.rock.ide.core.concretes.task.Initializer;
-import az.rock.ide.view.page.lib.panel.GPanel;
+import az.rock.ide.run.concretes.task.Initializer;
 import az.rock.ide.view.page.lib.panel.GSidePanel;
 
-import javax.swing.*;
 import java.awt.*;
 import java.util.stream.Stream;
 
