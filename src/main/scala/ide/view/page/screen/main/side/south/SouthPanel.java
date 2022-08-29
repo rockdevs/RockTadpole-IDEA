@@ -1,6 +1,5 @@
 package az.rock.ide.view.page.screen.main.side.south;
 
-import az.rock.ide.run.concretes.task.Initializer;
 import az.rock.ide.view.page.lib.panel.GSidePanel;
 
 import java.awt.*;
@@ -21,7 +20,6 @@ public class SouthPanel extends GSidePanel {
 
     @Override
     public void initializer() {
-        Stream.of(this.buttonBarGroup)
-                .forEach(Initializer::init);
+        this.buttonBarGroup.init();
     }
 }
