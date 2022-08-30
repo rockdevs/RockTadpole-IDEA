@@ -2,8 +2,8 @@ package az.rock.ide.run.concretes;
 
 import az.rock.ide.run.abstracts.RockApplication;
 import az.rock.ide.view.page.lib.frame.Compiler;
-import az.rock.ide.view.page.screen.main.MainGScreen;
 import az.rock.ide.view.page.screen.SplashGScreen;
+import az.rock.ide.view.page.screen.main.MainGScreen;
 import az.rock.ide.view.ui.factory.abstracts.AbstractScreenFactory;
 import az.rock.ide.view.ui.factory.concretes.ScreenFactory;
 import com.formdev.flatlaf.FlatDarculaLaf;
@@ -26,13 +26,12 @@ public class RunnableApplication implements RockApplication {
     private final ExecutorService executorService =  Executors.newFixedThreadPool(5);
     private final List<Callable<Boolean>> callables = new ArrayList<>();
 
-    private final MainGScreen mainGScreen = this.screenFactory.factoryMainGScreen();
     private final SplashGScreen splashGScreen = this.screenFactory.factorySplashGScreen();
 
 
     private final Callable<Boolean> mainCallable = ()->{
         Thread.sleep(3000);
-        Stream.of(mainGScreen)
+        Stream.of(new MainGScreen("RockTadpole-IDEA"))
                 .forEach(Compiler::compile);
         return true;
     };

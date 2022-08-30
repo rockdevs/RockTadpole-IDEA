@@ -2,11 +2,12 @@ package az.rock.ide.view.ui.button;
 
 import az.rock.ide.view.ui.icon.enums.GIconBar;
 import az.rock.ide.view.util.ImageProvider;
+import az.rock.ide.view.state.State;
 
 import javax.swing.*;
 import java.util.Objects;
 
-public class GButton extends JButton {
+public abstract class GButton extends JButton {
     public GButton(){
         super();
     }
@@ -20,10 +21,12 @@ public class GButton extends JButton {
         this.setIcon(new ImageIcon(Objects.requireNonNull(ImageProvider.getImage(iconBar.path()))));
     }
 
-    public GButton(GIconBar iconBar){
-        this();
+    public GButton( GIconBar iconBar){
         this.setIcon(new ImageIcon(Objects.requireNonNull(ImageProvider.getImage(iconBar.path()))));
     }
 
+    public State getState(){
+        return null;
+    }
 
 }

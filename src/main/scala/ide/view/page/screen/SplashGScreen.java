@@ -68,7 +68,7 @@ public class SplashGScreen extends GSplashFrame {
     private Component getContextPanel(){
 
         TransparentPanel transparentPanel = new TransparentPanel(new FlowLayout(FlowLayout.LEFT));
-        final JLabel jLabelText = new JLabel("Rock IDEA");
+        final JLabel jLabelText = new JLabel("Rock-IDEA");
         JSeparator sep = new JSeparator();
         final JLabel imageLabel = new JLabel(new ImageIcon(this.image));
         Dimension size = imageLabel.getPreferredSize();

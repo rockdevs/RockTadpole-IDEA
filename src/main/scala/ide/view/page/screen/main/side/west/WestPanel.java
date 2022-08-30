@@ -7,37 +7,50 @@ import az.rock.ide.view.ui.icon.enums.GIconBar;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.stream.Stream;
 
 public class WestPanel extends GSidePanel {
-    private final GButton projectButton = new GSimpleButton(GIconBar.FOLDER,"Project");
-    private final GButton bookmarksButton = new GSimpleButton(GIconBar.CONFIG_FOLDER,"Bookmarks");
-    private final GButton structuresButton = new GSimpleButton(GIconBar.DESKTOP,"Structures");
+    private boolean slidePanelVisibility = false;
+    private final GButton projectButton = new GSimpleButton(GIconBar.FOLDER);
+    private final GButton bookmarksButton = new GSimpleButton(GIconBar.CONFIG_FOLDER);
+    private final GButton structuresButton = new GSimpleButton(GIconBar.DESKTOP);
 
-    private final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.LEFT,JTabbedPane.WRAP_TAB_LAYOUT);
+    private final JToolBar toolBar = new JToolBar("Navigator",JToolBar.VERTICAL);
+    private final SlidePanel slidePanel = new SlidePanel();
 
     {
-        this.setBorder(BorderFactory.createLineBorder(Color.gray));
-
         Stream.of(projectButton,bookmarksButton,structuresButton)
-                .forEach(e->this.tabbedPane.add(e,e.getText()));
+                .forEach(e->this.toolBar.add(e));
     }
 
     public WestPanel() {
-        this.add(tabbedPane);
+        this.setLayout(new BorderLayout());
+        this.add(toolBar,BorderLayout.WEST);
+        this.add(this.slidePanel,BorderLayout.EAST);
+        this.setBorder(BorderFactory.createEtchedBorder());
     }
 
     public void addButton(GButton button){
         this.add(button);
     }
 
+    private final ActionListener visibleSlidePanel = (e -> {
+        this.slidePanel.setVisible(!this.slidePanelVisibility);
+        this.slidePanelVisibility = !this.slidePanelVisibility;
+    });
+
     @Override
     public void postConst() {
+        Stream.of(this.projectButton,this.bookmarksButton,this.structuresButton)
+                .forEach(e->e.addActionListener(visibleSlidePanel));
 
     }
 
     @Override
     public void initializer() {
-
+        this.slidePanel.init();
+        this.slidePanel.setVisible(slidePanelVisibility);
     }
 }

@@ -1,6 +1,6 @@
 package az.rock.ide.view.ui.factory.abstracts;
+import az.rock.ide.view.page.screen.main.*;
 
-import az.rock.ide.view.page.screen.main.MainGScreen;
 import az.rock.ide.view.page.screen.SplashGScreen;
 
 public  abstract class AbstractScreenFactory {

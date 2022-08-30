@@ -7,4 +7,7 @@ public class GSimpleButton extends GButton {
     public GSimpleButton(GIconBar iconBar, String name){
         super(name,iconBar);
     }
+    public GSimpleButton(GIconBar iconBar){
+        super(iconBar);
+    }
 }
