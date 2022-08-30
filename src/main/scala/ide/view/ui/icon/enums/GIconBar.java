@@ -9,6 +9,8 @@ public enum GIconBar {
     COPY("src/main/scala/ide/view/ui/icon/png/copyOfFolder.png"),
     COMPARE_WITH("src/main/scala/ide/view/ui/icon/png/compare4MiddleBottom_dark.png"),
     ADD(""),
+    CANCEL("src/main/scala/ide/view/ui/icon/png/cancel.png"),
+    HIDE("src/main/scala/ide/view/ui/icon/png/hide.png"),
     INSTALL("src/main/scala/ide/view/ui/icon/png/install_dark.png"),
     COMPILE("src/main/scala/ide/view/ui/icon/png/compile.png"),
     EXECUTE("src/main/scala/ide/view/ui/icon/png/execute_dark.png"),

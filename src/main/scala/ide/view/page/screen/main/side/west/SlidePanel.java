@@ -15,7 +15,7 @@ public class SlidePanel extends GPanel {
         this.setLayout(new BorderLayout());
         this.add(this.topPanel,BorderLayout.NORTH);
         this.add(this.mainPanel,BorderLayout.SOUTH);
-        
+        this.setPreferredSize(new Dimension(300,500));
     }
 
     @Override
