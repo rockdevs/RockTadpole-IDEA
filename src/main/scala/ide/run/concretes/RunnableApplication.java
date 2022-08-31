@@ -3,6 +3,7 @@ package az.rock.ide.run.concretes;
 import az.rock.ide.run.abstracts.RockApplication;
 import az.rock.ide.view.page.lib.frame.Compiler;
 import az.rock.ide.view.page.screen.SplashGScreen;
+import az.rock.ide.view.page.screen.intro.IntroGScreen;
 import az.rock.ide.view.page.screen.main.MainGScreen;
 import az.rock.ide.view.ui.factory.abstracts.AbstractScreenFactory;
 import az.rock.ide.view.ui.factory.concretes.ScreenFactory;
@@ -30,7 +31,7 @@ public class RunnableApplication implements RockApplication {
 
 
     private final Callable<Boolean> mainCallable = ()->{
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         Stream.of(new MainGScreen("RockTadpole-IDEA"))
                 .forEach(Compiler::compile);
         return true;

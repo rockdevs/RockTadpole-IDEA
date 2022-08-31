@@ -1,3 +1,3 @@
 package az.rock.ide.view.state
 
-trait State {}
+trait State[+A] {}

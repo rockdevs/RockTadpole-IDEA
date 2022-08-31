@@ -1,12 +1,15 @@
 package az.rock.ide.view.page.component.bar;
 
 import az.rock.ide.view.page.lib.bar.GMenuItem;
+import az.rock.ide.view.page.screen.intro.IntroGScreen;
 import az.rock.ide.view.ui.bar.GMenu;
 import az.rock.ide.view.ui.bar.GMenuBar;
 import az.rock.ide.view.ui.factory.abstracts.AbstractBarFactory;
 import az.rock.ide.view.ui.factory.concretes.BarFactory;
 import az.rock.ide.view.ui.icon.enums.GIconBar;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.stream.Stream;
 
 public class ToolGMenuBar extends GMenuBar {
@@ -76,7 +79,12 @@ public class ToolGMenuBar extends GMenuBar {
 
     @Override
     public void postConst() {
-
+        this.openItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new IntroGScreen().compile();
+            }
+        });
     }
 
     @Override

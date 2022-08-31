@@ -5,7 +5,7 @@ import az.rock.ide.view.page.lib.panel.GPanel;
 import java.awt.*;
 
 public final class CentralPanel extends GPanel {
-    private  GPanel panel = new CodeEditorTabbedPanel();
+    private  GPanel panel = new FreePanel();
 
     public CentralPanel(){
         super();
