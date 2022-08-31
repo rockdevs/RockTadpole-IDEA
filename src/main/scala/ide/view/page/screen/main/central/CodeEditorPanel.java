@@ -14,8 +14,6 @@ public class CodeEditorPanel extends GPanel {
         super();
         this.setLayout(new BorderLayout());
         rSyntaxTextArea.setSyntaxEditingStyle("text/java");
-
-
         rSyntaxTextArea.setCodeFoldingEnabled(true);
         RTextScrollPane scrollPane = new RTextScrollPane(rSyntaxTextArea);
         this.add(scrollPane);

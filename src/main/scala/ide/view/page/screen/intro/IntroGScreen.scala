@@ -10,7 +10,7 @@ import az.rock.ide.view.page.lib.panel.GPanel
 
 import java.awt.{BorderLayout, Dimension}
 
-class IntroGScreen() extends GFrame("RockTadpole-IDEA") {
+class IntroGScreen() extends GFrame("Open Project") {
   private var STATE: State[IntroState] = null
   private val  westPanel : GPanel = new IntroWestPanel()
 
