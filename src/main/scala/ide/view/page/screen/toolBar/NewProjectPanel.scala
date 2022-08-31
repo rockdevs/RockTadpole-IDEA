@@ -20,6 +20,7 @@ class NewProjectPanel extends GFrame{
 
   private var buttonPanel : JPanel = new JPanel()
   private var nextButton : GButton = new GSimpleButton("Next")
+  private var previewButton : GButton = new GSimpleButton("Preview")
   private var cancelButton : GButton = new GSimpleButton("Cancel")
 
   {
@@ -28,8 +29,9 @@ class NewProjectPanel extends GFrame{
     this.panels.add(new IntroInnerPanel)
 
     this.buttonPanel.setLayout(new FlowLayout(FlowLayout.RIGHT))
-    this.buttonPanel.add(this.nextButton)
     this.buttonPanel.add(this.cancelButton)
+    this.buttonPanel.add(this.previewButton)
+    this.buttonPanel.add(this.nextButton)
   }
 
 
