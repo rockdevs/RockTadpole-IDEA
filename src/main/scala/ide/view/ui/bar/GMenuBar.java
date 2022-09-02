@@ -1,10 +1,9 @@
 package az.rock.ide.view.ui.bar;
 
 import az.rock.ide.run.concretes.task.Initializer;
-import az.rock.ide.view.page.screen.Loadable;
 
 import javax.swing.*;
-
+import az.rock.ide.view.page.screen.Loadable;
 public abstract  class GMenuBar extends JMenuBar implements Initializer, Loadable {
     public GMenuBar(){
         super();

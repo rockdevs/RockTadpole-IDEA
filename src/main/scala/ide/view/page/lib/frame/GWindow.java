@@ -1,9 +1,7 @@
 package az.rock.ide.view.page.lib.frame;
 
-import az.rock.ide.view.page.screen.Loadable;
-
 import javax.swing.*;
-
+import az.rock.ide.view.page.screen.Loadable;
 public abstract class GWindow extends JWindow implements Compiler , Loadable {
 
     public GWindow(){
