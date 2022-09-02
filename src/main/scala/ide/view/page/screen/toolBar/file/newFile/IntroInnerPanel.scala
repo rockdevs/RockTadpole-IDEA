@@ -1,9 +1,9 @@
 package az.rock
-package ide.view.page.screen.toolBar.file
+package ide.view.page.screen.toolBar.file.newFile
 
 import ide.view.page.lib.label.GElementLabel
 import ide.view.page.lib.panel.{GPanel, GSimplePanel}
-import ide.view.page.screen.toolBar.file.InnerQueuePanel
+import ide.view.page.screen.toolBar.file.newFile.InnerQueuePanel
 
 import java.awt.*
 import javax.swing.*

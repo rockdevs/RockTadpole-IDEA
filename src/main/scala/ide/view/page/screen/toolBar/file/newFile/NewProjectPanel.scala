@@ -1,8 +1,9 @@
 package az.rock
-package ide.view.page.screen.toolBar.file
+package ide.view.page.screen.toolBar.file.newFile
 
 import ide.view.page.lib.panel.GPanel
-import ide.view.page.screen.toolBar.file.IntroInnerPanel
+import ide.view.page.screen.toolBar.file.newFile.{ClosePanelActionListener, IntroInnerPanel}
+import ide.view.page.screen.toolBar.file.newFile.InnerQueuePanel
 import ide.view.state.State
 import ide.view.state.model.IntroState
 import ide.view.ui.button.{GButton, GSimpleButton}
