@@ -1,5 +1,5 @@
 package az.rock
-package ide.view.page.screen.toolBar
+package ide.view.page.screen.toolBar.file
 
 import ide.view.page.lib.panel.GPanel
 
