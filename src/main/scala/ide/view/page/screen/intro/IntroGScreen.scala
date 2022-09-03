@@ -6,24 +6,27 @@ import ide.view.state.model.IntroState
 import ide.view.ui.frame.{GFrame, GMainFrame}
 
 import az.rock.ide.view.page.screen.intro.IntroWestPanel
-import az.rock.ide.view.page.lib.panel.GPanel
+import az.rock.ide.view.page.lib.panel.{GPanel, GSimplePanel}
+import az.rock.ide.view.ui.frame.MonoGFrame
 
 import java.awt.{BorderLayout, Dimension}
 
-class IntroGScreen() extends GFrame("Open Project") {
+class IntroGScreen() extends MonoGFrame("Open Project") {
   private var STATE: State[IntroState] = null
   private val  westPanel : GPanel = new IntroWestPanel()
+  private val mainPanel : GPanel = new IntroMainPanel
 
-
-  override def postConst() = {
-    this.setVisible(true);
-    this.setSize(new Dimension(700,600));
-    this.setLayout(new BorderLayout());
-    this.add(this.westPanel,BorderLayout.WEST);
-    this.setLocationRelativeTo(null)
+  {
+    this.add(this.westPanel,BorderLayout.WEST)
+    this.add(this.mainPanel,BorderLayout.CENTER)
   }
 
-  override def initializer() = {
+  override def postConst() : Unit = {
+
+  }
+
+  override def initializer() : Unit = {
     this.westPanel.init();
   }
+
 }
