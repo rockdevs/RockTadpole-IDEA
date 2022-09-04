@@ -18,30 +18,28 @@ class IntroMainPanel extends GSimplePanel{
   private val getRepository : GSimpleButton = new GSimpleButton("Remote Repository")
   private val layout : Box = Box.createVerticalBox()
 
-  /**
-   * Some Modify on Variables
-   */
-  {
-    this.openProject.setAlignmentX(Component.CENTER_ALIGNMENT)
-    this.newProject.setAlignmentX(Component.CENTER_ALIGNMENT)
-    this.getRepository.setAlignmentX(Component.CENTER_ALIGNMENT)
-  }
-  
-  {
-    this.setLayout(new BorderLayout())
-    this.layout.add(this.newProject)
-    this.layout.add(this.openProject)
-    this.layout.add(this.getRepository)
-    this.buttonsPanel.add(layout)
-    this.add(this.buttonsPanel,BorderLayout.CENTER)
-  }
+  override def componentInitializer(): Unit = {
+    {
+      this.openProject.setAlignmentX(Component.CENTER_ALIGNMENT)
+      this.newProject.setAlignmentX(Component.CENTER_ALIGNMENT)
+      this.getRepository.setAlignmentX(Component.CENTER_ALIGNMENT)
+    }
 
-  
-  override def componentInitializer(): Unit = super.componentInitializer()
+
+    //IntroMainPanel Initializer
+    {
+      this.setLayout(new BorderLayout())
+      this.layout.add(this.newProject)
+      this.layout.add(this.openProject)
+      this.layout.add(this.getRepository)
+      this.buttonsPanel.add(layout)
+      this.add(this.buttonsPanel,BorderLayout.CENTER)
+    }
+  }
 
   override def postConst(): Unit = super.postConst()
 
 
-  
+
 
 }
