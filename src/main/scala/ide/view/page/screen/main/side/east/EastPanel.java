@@ -9,7 +9,7 @@ public class EastPanel extends GSidePanel {
     }
 
     @Override
-    public void initializer() {
+    public void componentInitializer() {
 
     }
 }

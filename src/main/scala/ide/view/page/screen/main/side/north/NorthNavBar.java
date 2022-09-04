@@ -30,7 +30,7 @@ public class NorthNavBar extends NavigableGBar  {
     }
 
     @Override
-    public void initializer() {
+    public void componentInitializer() {
 
     }
 }

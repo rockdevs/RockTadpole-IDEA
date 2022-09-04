@@ -45,7 +45,7 @@ class NewProjectPanel extends MonoGFrame{
     this.add(this.buttonPanel,BorderLayout.SOUTH)
   }
 
-  override def initializer(): Unit = {
+  override def componentInitializer(): Unit = {
     this.panels.peek().init()
   }
 }

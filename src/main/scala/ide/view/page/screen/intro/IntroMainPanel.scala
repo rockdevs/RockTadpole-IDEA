@@ -8,19 +8,25 @@ import az.rock.ide.view.ui.button.GSimpleButton
 import java.awt.{BorderLayout, Component, ComponentOrientation, GridBagLayout, GridLayout}
 import javax.swing.{BorderFactory, Box, BoxLayout, SwingConstants}
 class IntroMainPanel extends GSimplePanel{
-  private val buttonsPanel : GSimplePanel = new GSimplePanel
 
+  /**
+   * Variable Declaration
+   */
+  private val buttonsPanel : GSimplePanel = new GSimplePanel
   private val openProject : GSimpleButton = new GSimpleButton("Open Project")
   private val newProject : GSimpleButton = new GSimpleButton("New Project")
   private val getRepository : GSimpleButton = new GSimpleButton("Remote Repository")
-
   private val layout : Box = Box.createVerticalBox()
 
+  /**
+   * Some Modify on Variables
+   */
   {
     this.openProject.setAlignmentX(Component.CENTER_ALIGNMENT)
     this.newProject.setAlignmentX(Component.CENTER_ALIGNMENT)
     this.getRepository.setAlignmentX(Component.CENTER_ALIGNMENT)
   }
+  
   {
     this.setLayout(new BorderLayout())
     this.layout.add(this.newProject)
@@ -30,7 +36,12 @@ class IntroMainPanel extends GSimplePanel{
     this.add(this.buttonsPanel,BorderLayout.CENTER)
   }
 
-  override def initializer(): Unit = super.initializer()
+  
+  override def componentInitializer(): Unit = super.componentInitializer()
 
   override def postConst(): Unit = super.postConst()
+
+
+  
+
 }

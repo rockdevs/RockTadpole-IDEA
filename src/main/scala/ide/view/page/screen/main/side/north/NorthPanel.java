@@ -22,7 +22,7 @@ public class NorthPanel extends GSidePanel {
     }
 
     @Override
-    public void initializer() {
+    public void componentInitializer() {
         Stream.of(this.navBar)
                 .forEach(Initializer::init);
     }

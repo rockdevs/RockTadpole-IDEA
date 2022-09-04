@@ -96,7 +96,7 @@ public class ToolGMenuBar extends GMenuBar {
     }
 
     @Override
-    public void initializer() {
+    public void componentInitializer() {
 
     }
 }

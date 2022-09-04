@@ -15,7 +15,7 @@ public abstract class GFrame extends JFrame implements Compiler, Loadable {
     @Override
     public void compile() {
         this.postConst();
-        this.initializer();
+        this.componentInitializer();
         this.setVisible(true);
     }
 }

@@ -19,7 +19,7 @@ class MainGScreen(val header: String) extends GMainFrame(header) {
     this.add(this.mainBlock)
   }
 
-  override def initializer() = {
+  override def componentInitializer() = {
     this.initIcon()
     this.mainBlock.init()
   }

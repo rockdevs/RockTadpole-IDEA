@@ -17,7 +17,7 @@ public abstract  class GMenuBar extends JMenuBar implements Initializer, Loadabl
     @Override
     public void init() {
         this.postConst();
-        this.initializer();
+        this.componentInitializer();
         this.setVisible(true);
     }
 }

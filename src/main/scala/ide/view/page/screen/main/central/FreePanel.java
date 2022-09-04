@@ -36,7 +36,7 @@ public class FreePanel extends GPanel {
     }
 
     @Override
-    public void initializer() {
+    public void componentInitializer() {
 
     }
 }

@@ -19,7 +19,7 @@ public class SlidePanel extends GPanel {
     }
 
     @Override
-    public void initializer() {
+    public void componentInitializer() {
         this.topPanel.init();
         this.mainPanel.init();
     }

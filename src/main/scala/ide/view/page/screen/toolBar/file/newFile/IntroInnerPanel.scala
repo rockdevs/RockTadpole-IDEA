@@ -39,7 +39,7 @@ class IntroInnerPanel extends InnerQueuePanel {
     this.add(this.factoryFlowPane(this.versionLabel,new JTextField()))
   }
 
-  override def initializer(): Unit = {
+  override def componentInitializer(): Unit = {
     
   }
 }

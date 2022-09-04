@@ -19,7 +19,7 @@ public class SouthPanel extends GSidePanel {
     }
 
     @Override
-    public void initializer() {
+    public void componentInitializer() {
         this.buttonBarGroup.init();
     }
 }

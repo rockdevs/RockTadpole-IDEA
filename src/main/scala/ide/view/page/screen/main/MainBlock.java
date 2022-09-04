@@ -37,7 +37,7 @@ public class MainBlock extends GPanel {
     }
 
     @Override
-    public void initializer() {
+    public void componentInitializer() {
         Stream.of(northPanel,southPanel,eastPanel,westPanel,centralPanel)
                 .forEach(Initializer::init);
     }

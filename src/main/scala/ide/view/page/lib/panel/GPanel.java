@@ -12,7 +12,7 @@ public abstract class GPanel extends JPanel implements Initializer, Loadable {
     @Override
     public void init() {
         this.postConst();
-        this.initializer();
+        this.componentInitializer();
         this.setVisible(true);
     }
 }

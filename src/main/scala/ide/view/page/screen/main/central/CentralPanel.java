@@ -28,7 +28,7 @@ public final class CentralPanel extends GPanel {
     }
 
     @Override
-    public void initializer() {
+    public void componentInitializer() {
         this.panel.init();
     }
 }

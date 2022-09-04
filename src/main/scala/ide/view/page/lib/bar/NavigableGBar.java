@@ -12,7 +12,7 @@ public abstract class NavigableGBar extends JToolBar implements Initializer, Loa
     @Override
     public void init() {
         this.postConst();
-        this.initializer();
+        this.componentInitializer();
         this.setVisible(true);
     }
 }

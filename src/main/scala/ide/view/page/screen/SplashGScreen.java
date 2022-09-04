@@ -35,7 +35,7 @@ public class SplashGScreen extends GSplashFrame {
     }
 
     @Override
-    public void initializer() {
+    public void componentInitializer() {
         this.pack();
     }
 

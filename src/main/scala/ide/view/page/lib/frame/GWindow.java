@@ -11,7 +11,7 @@ public abstract class GWindow extends JWindow implements Compiler , Loadable {
     @Override
     public void compile() {
         this.postConst();
-        this.initializer();
+        this.componentInitializer();
         this.setVisible(true);
     }
 }

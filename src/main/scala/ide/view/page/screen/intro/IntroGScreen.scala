@@ -25,7 +25,7 @@ class IntroGScreen() extends MonoGFrame("Open Project") {
 
   }
 
-  override def initializer() : Unit = {
+  override def componentInitializer() : Unit = {
     this.westPanel.init();
   }
 
