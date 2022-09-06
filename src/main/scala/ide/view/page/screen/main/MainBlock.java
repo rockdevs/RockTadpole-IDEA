@@ -1,6 +1,6 @@
 package az.rock.ide.view.page.screen.main;
 
-import az.rock.ide.run.concretes.task.Initializer;
+import az.rock.ide.engine.concretes.task.Initializer;
 import az.rock.ide.view.page.lib.panel.GPanel;
 import az.rock.ide.view.page.screen.main.central.CentralPanel;
 import az.rock.ide.view.page.screen.main.side.south.SouthPanel;

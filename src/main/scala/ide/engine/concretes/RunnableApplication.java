@@ -1,9 +1,8 @@
-package az.rock.ide.run.concretes;
+package az.rock.ide.engine.concretes;
 
-import az.rock.ide.run.abstracts.RockApplication;
+import az.rock.ide.engine.abstracts.RockApplication;
 import az.rock.ide.view.page.lib.frame.Compiler;
 import az.rock.ide.view.page.screen.SplashGScreen;
-import az.rock.ide.view.page.screen.intro.IntroGScreen;
 import az.rock.ide.view.page.screen.main.MainGScreen;
 import az.rock.ide.view.ui.factory.abstracts.AbstractScreenFactory;
 import az.rock.ide.view.ui.factory.concretes.ScreenFactory;

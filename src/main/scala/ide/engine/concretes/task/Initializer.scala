@@ -1,4 +1,4 @@
-package az.rock.ide.run.concretes.task
+package az.rock.ide.engine.concretes.task
 
 @FunctionalInterface trait Initializer {
   def init() : Unit
