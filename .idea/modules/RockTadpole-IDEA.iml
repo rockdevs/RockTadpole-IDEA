@@ -16,6 +16,12 @@
     <orderEntry type="library" name="sbt: com.formdev:flatlaf-intellij-themes:2.4:jar" level="project" />
     <orderEntry type="library" name="sbt: com.formdev:flatlaf:2.4:jar" level="project" />
     <orderEntry type="library" name="sbt: org.checkerframework:checker-qual:3.5.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-base:20-ea+2:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-base:20-ea+2:win:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-graphics:20-ea+2:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-graphics:20-ea+2:win:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-swing:20-ea+2:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.openjfx:javafx-swing:20-ea+2:win:jar" level="project" />
     <orderEntry type="library" name="sbt: org.postgresql:postgresql:42.5.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.projectlombok:lombok:1.18.24:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.13.8:jar" level="project" />

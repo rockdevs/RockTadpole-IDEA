@@ -11,12 +11,13 @@ import az.rock.ide.view.ui.frame.MonoGFrame
 
 import java.awt.{BorderLayout, Dimension}
 
-class IntroGScreen() extends MonoGFrame("Open Project") {
+class IntroGScreen(name:String) extends MonoGFrame(name:String) {
   private var STATE: State[IntroState] = null
   private val  westPanel : GPanel = new IntroWestPanel()
   private val mainPanel : GPanel = new IntroMainPanel
 
   {
+    this.setName("Project Explorer")
     this.setDefaultCloseOperation(3)
   }
 

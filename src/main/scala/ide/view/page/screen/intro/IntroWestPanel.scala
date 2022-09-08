@@ -12,7 +12,7 @@ import java.awt._
 
 class IntroWestPanel extends GPanel{
   private val buttonPanel : GPanel = new GSimplePanel()
-  private val scrollPane : JScrollPane = new JScrollPane()
+  private var scrollPane : JScrollPane = null
   private var mavenProjectBtn : GSimpleButton = new GSimpleButton("Maven Project",GIconBar.MAVEN)
   private var javaProjectBtn : GSimpleButton = new GSimpleButton("Java Project",GIconBar.JAVA)
   private var scalaProjectBtn : GSimpleButton = new GSimpleButton("Scala Project",GIconBar.SCALA)
@@ -23,7 +23,7 @@ class IntroWestPanel extends GPanel{
     this.buttonPanel.add(this.mavenProjectBtn)
     this.buttonPanel.add(this.javaProjectBtn)
     this.buttonPanel.add(this.scalaProjectBtn)
-    this.scrollPane.add(this.buttonPanel)
+    this.scrollPane = new JScrollPane(this.buttonPanel)
     this.add(this.scrollPane)
   }
 

@@ -2,21 +2,32 @@ package az.rock
 package ide.view.page.screen.intro
 
 import ide.view.page.lib.panel.GSimplePanel
-
-import az.rock.ide.view.ui.button.GSimpleButton
-
-import java.awt.{BorderLayout, Component, ComponentOrientation, GridBagLayout, GridLayout}
+import az.rock.ide.view.ui.button._
+import java.awt.{BorderLayout, Component, ComponentOrientation, Dimension, GridBagLayout, GridLayout}
 import javax.swing.{BorderFactory, Box, BoxLayout, SwingConstants}
+import az.rock.ide.view.ui.icon.enums.GIconBar
+
 class IntroMainPanel extends GSimplePanel{
 
   /**
    * Variable Declaration
    */
   private val buttonsPanel : GSimplePanel = new GSimplePanel
-  private val openProject : GSimpleButton = new GSimpleButton("Open Project")
-  private val newProject : GSimpleButton = new GSimpleButton("New Project")
-  private val getRepository : GSimpleButton = new GSimpleButton("Remote Repository")
-  private val layout : Box = Box.createVerticalBox()
+  private val openProject : GButton = new GSquareButton("Open Project",GIconBar.FOLDER)
+  private val newProject : GButton = new GSquareButton("New Project",GIconBar.ANY_TYPE)
+  private val getRepository : GButton = new GSquareButton("Git Repo",GIconBar.GIT)
+
+  {
+    import javax.swing.SwingConstants
+    openProject.setVerticalTextPosition(SwingConstants.BOTTOM)
+    openProject.setHorizontalTextPosition(SwingConstants.CENTER)
+
+    newProject.setVerticalTextPosition(SwingConstants.BOTTOM)
+    newProject.setHorizontalTextPosition(SwingConstants.CENTER)
+
+    getRepository.setVerticalTextPosition(SwingConstants.BOTTOM)
+    getRepository.setHorizontalTextPosition(SwingConstants.CENTER)
+  }
 
   override def componentInitializer(): Unit = {
     {
@@ -29,10 +40,10 @@ class IntroMainPanel extends GSimplePanel{
     //IntroMainPanel Initializer
     {
       this.setLayout(new BorderLayout())
-      this.layout.add(this.newProject)
-      this.layout.add(this.openProject)
-      this.layout.add(this.getRepository)
-      this.buttonsPanel.add(layout)
+      this.buttonsPanel.add(this.newProject)
+      this.buttonsPanel.add(this.openProject)
+      this.buttonsPanel.add(this.getRepository)
+      this.buttonsPanel.setLayout(new GridBagLayout())
       this.add(this.buttonsPanel,BorderLayout.CENTER)
     }
   }

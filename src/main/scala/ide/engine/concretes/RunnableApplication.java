@@ -28,7 +28,7 @@ public class RunnableApplication implements RockApplication {
     private final List<Callable<Boolean>> callables = new ArrayList<>();
 
     private final SplashGScreen splashGScreen = this.screenFactory.factorySplashGScreen();
-    private final IntroGScreen introGScreen = new IntroGScreen();
+    private final IntroGScreen introGScreen = new IntroGScreen("Open Project");
 
     private final Callable<Boolean> mainCallable = ()->{
         Thread.sleep(1000);
@@ -45,9 +45,11 @@ public class RunnableApplication implements RockApplication {
 
     @Override
     public void run(String... args) {
+//        Thread splashTread = new Thread(runnableSplash);
+//        splashTread.start();
         try {
-            Thread splashTread = new Thread(runnableIntroScreen);
-            splashTread.start();
+            Thread introThread = new Thread(runnableIntroScreen);
+            introThread.start();
         } catch (Exception  e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application  Exception");

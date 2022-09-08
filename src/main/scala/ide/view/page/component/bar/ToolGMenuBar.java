@@ -83,7 +83,7 @@ public class ToolGMenuBar extends GMenuBar {
         this.openItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new IntroGScreen().compile();
+                new IntroGScreen("Open Project").compile();
             }
         });
 
