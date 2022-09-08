@@ -11,6 +11,7 @@ class GActionListener (panel: GFrame) extends ActionListener{
     this.panelActionListener = panel;
   }
   override def actionPerformed(e: ActionEvent): Unit = {
+    println("DISPOSE")
     panel.dispose()
   }
 }
