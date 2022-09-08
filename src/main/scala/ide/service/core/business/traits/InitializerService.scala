@@ -1,4 +1,4 @@
 package az.rock
-package ide.service.business.traits
+package ide.service.core.business.traits
 
 trait InitializerService 

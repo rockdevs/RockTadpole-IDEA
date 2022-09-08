@@ -1,6 +1,9 @@
 package az.rock.ide.view.ui.icon.enums;
 //src/main/scala/ide/view/ui/icon/png/add.png
 public enum GIconBar {
+    MAVEN("src/main/scala/ide/view/ui/icon/png/executeMavenGoal_dark.png"),
+    SCALA("src/main/scala/ide/view/ui/icon/png/classScala.png"),
+    JAVA("src/main/scala/ide/view/ui/icon/png/java.png"),
     MAIN_ICON("src/main/scala/ide/view/ui/icon/png/R.png"),
     ANY_TYPE("src/main/scala/ide/view/ui/icon/png/any_type.png"),
     UNDO("src/main/scala/ide/view/ui/icon/png/undo_dark.png"),
