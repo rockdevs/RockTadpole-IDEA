@@ -5,8 +5,6 @@ import ide.view.ui.frame.GFrame
 
 import java.awt.event.{ActionEvent, ActionListener}
 
-class ExitActionListener(panel: GFrame) extends ActionListener{
-  override def actionPerformed(e: ActionEvent): Unit = {
-    panel.dispose()
-  }
+class ExitActionListener(panel: GFrame) extends GActionListener(panel:GFrame){
+
 }

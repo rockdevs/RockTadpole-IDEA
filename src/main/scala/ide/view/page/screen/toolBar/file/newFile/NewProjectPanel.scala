@@ -9,6 +9,8 @@ import ide.view.state.model.IntroState
 import ide.view.ui.button.{GButton, GSimpleButton}
 import ide.view.ui.frame.{GFrame, MonoGFrame}
 
+import az.rock.ide.view.page.screen.toolBar.file.other.GActionListener
+
 import java.awt.event.{ActionEvent, ActionListener}
 import java.awt.{BorderLayout, Dimension, FlowLayout}
 import java.util.PriorityQueue
@@ -51,12 +53,6 @@ class NewProjectPanel extends MonoGFrame{
 }
 
 
-class ClosePanelActionListener(panel: GFrame) extends ActionListener{
-  private var panelActionListener : GFrame = null
-  {
-    this.panelActionListener = panel;
-  }
-  override def actionPerformed(e: ActionEvent): Unit = {
-    panel.dispose()
-  }
+class ClosePanelActionListener(panel: GFrame) extends GActionListener(panel:GFrame){
+
 }

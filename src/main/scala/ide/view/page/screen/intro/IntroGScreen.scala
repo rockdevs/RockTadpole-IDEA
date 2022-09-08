@@ -30,7 +30,7 @@ class IntroGScreen(name:String) extends MonoGFrame(name:String) {
   }
 
   override def postConst() : Unit = {
-
+    
   }
 
   override def componentInitializer() : Unit = {

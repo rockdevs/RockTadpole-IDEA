@@ -3,12 +3,14 @@ package ide.view.page.screen.intro
 
 import ide.view.page.lib.panel.{GPanel, GSimplePanel}
 
+import az.rock.ide.view.page.screen.toolBar.file.other.ExitActionListener
 import az.rock.ide.view.ui.button.GSimpleButton
 import az.rock.ide.view.ui.icon.enums.GIconBar
 
 import java.awt.BorderLayout
 import javax.swing.JScrollPane
-import java.awt._
+import java.awt.*
+import java.awt.event.{ActionEvent, ActionListener}
 
 class IntroWestPanel extends GPanel{
   private val buttonPanel : GPanel = new GSimplePanel()
@@ -25,6 +27,11 @@ class IntroWestPanel extends GPanel{
     this.buttonPanel.add(this.scalaProjectBtn)
     this.scrollPane = new JScrollPane(this.buttonPanel)
     this.add(this.scrollPane)
+  }
+
+
+  {
+    this.javaProjectBtn.addActionListener(new ExitActionListener(this))
   }
 
   override def componentInitializer(): Unit = {
