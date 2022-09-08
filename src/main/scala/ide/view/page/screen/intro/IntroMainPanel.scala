@@ -15,7 +15,7 @@ class IntroMainPanel extends GSimplePanel{
   private val buttonsPanel : GSimplePanel = new GSimplePanel
   private val openProject : GButton = new GSquareButton("Open Project",GIconBar.FOLDER)
   private val newProject : GButton = new GSquareButton("New Project",GIconBar.ANY_TYPE)
-  private val getRepository : GButton = new GSquareButton("Git Repo",GIconBar.GIT)
+  private val getRepository : GButton = new GSquareButton("Github",GIconBar.GIT)
 
   {
     import javax.swing.SwingConstants

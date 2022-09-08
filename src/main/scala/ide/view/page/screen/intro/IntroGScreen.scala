@@ -16,9 +16,17 @@ class IntroGScreen(name:String) extends MonoGFrame(name:String) {
   private val  westPanel : GPanel = new IntroWestPanel()
   private val mainPanel : GPanel = new IntroMainPanel
 
+  
   {
-    this.setName("Project Explorer")
     this.setDefaultCloseOperation(3)
+  }
+  {
+    this.westPanel.init()
+    this.mainPanel.init()
+  }
+  {
+    this.add(this.westPanel,BorderLayout.WEST)
+    this.add(this.mainPanel,BorderLayout.CENTER)
   }
 
   override def postConst() : Unit = {
@@ -26,15 +34,6 @@ class IntroGScreen(name:String) extends MonoGFrame(name:String) {
   }
 
   override def componentInitializer() : Unit = {
-
-    {
-      this.westPanel.init()
-      this.mainPanel.init()
-    }
-    {
-      this.add(this.westPanel,BorderLayout.WEST)
-      this.add(this.mainPanel,BorderLayout.CENTER)
-    }
 
   }
 

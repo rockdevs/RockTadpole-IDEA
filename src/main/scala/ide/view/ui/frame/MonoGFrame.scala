@@ -6,7 +6,7 @@ import java.awt.{BorderLayout, Dimension}
 abstract class MonoGFrame extends GFrame{
   def this(name:String) = {
     this()
-    this.setName(name)
+    this.setName("Open Project")
   }
 
   {
