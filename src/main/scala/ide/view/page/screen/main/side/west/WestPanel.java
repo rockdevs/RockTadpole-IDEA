@@ -29,6 +29,15 @@ public class WestPanel extends GSidePanel {
                 .forEach(e->this.toolBar.add(e));
     }
 
+    {
+        this.projectButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Logger.spec("Call addActionListener Method");
+                visibleSlidePanel(new NavigatorSideGPanel());
+            }
+        });
+    }
     public WestPanel() {
         this.slidePanel = new SlidePanel(new FreeSideChildPanel());
         this.setLayout(new BorderLayout());
@@ -42,20 +51,16 @@ public class WestPanel extends GSidePanel {
     }
 
     private final void visibleSlidePanel(AbstractSideChildGPanel childGPanel) {
-        this.slidePanel = new SlidePanel(childGPanel);
+        this.slidePanel = new SlidePanel(new NavigatorSideGPanel());
         this.slidePanel.setVisible(!this.slidePanelVisibility);
         this.slidePanelVisibility = !this.slidePanelVisibility;
+        this.updateUI();
+        Logger.spec("Call visibleSlidePanel Method");
     };
 
     @Override
     public void postConst() {
-        this.projectButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Logger.info(e);
-                visibleSlidePanel(new NavigatorSideGPanel());
-            }
-        });
+
     }
 
     @Override

@@ -30,7 +30,6 @@ public class SlidePanel extends GPanel {
 
     @Override
     public void postConst() {
-        
     }
 
 }

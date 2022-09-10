@@ -21,4 +21,12 @@ public class Logger {
 
     }
 
+    public static void spec(String specialText){
+        System.out.println(ConsoleColor.RESET.getColor() +
+                        ConsoleColor.CYAN.getColor() + "[LOG SPEC  " + new Date().toString() + " ] : -> ".concat(
+                        ConsoleColor.WHITE.getColor() + specialText
+                )
+        );
+    }
+
 }
