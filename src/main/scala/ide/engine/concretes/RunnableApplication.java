@@ -44,30 +44,30 @@ public class RunnableApplication implements RockApplication {
     private final Runnable runnableSplash = this.splashGScreen::compile;
     private final Runnable runnableIntroScreen = this.introGScreen::compile;
 
-    @Override
-    public void run(String... args) {
-        try {
-            Thread introThread = new Thread(runnableIntroScreen);
-            introThread.start();
-        } catch (Exception  e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application  Exception");
-        }
-    }
-
 //    @Override
 //    public void run(String... args) {
-//        Thread splashTread = new Thread(runnableSplash);
-//        splashTread.start();
 //        try {
-//            boolean taskResult = true;
-//            List<Future<Boolean>> tasks = this.executorService.invokeAll(callables);
-//            for (Future<Boolean> result: tasks)
-//                if (!result.get()) taskResult = false;
-//            if (taskResult) splashTread.interrupt();
-//        } catch (ExecutionException | InterruptedException e) {
+//            Thread introThread = new Thread(runnableIntroScreen);
+//            introThread.start();
+//        } catch (Exception  e) {
 //            e.printStackTrace();
 //            JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application  Exception");
 //        }
 //    }
+
+    @Override
+    public void run(String... args) {
+        Thread splashTread = new Thread(runnableSplash);
+        splashTread.start();
+        try {
+            boolean taskResult = true;
+            List<Future<Boolean>> tasks = this.executorService.invokeAll(callables);
+            for (Future<Boolean> result: tasks)
+                if (!result.get()) taskResult = false;
+            if (taskResult) splashTread.interrupt();
+        } catch (ExecutionException | InterruptedException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application  Exception");
+        }
+    }
 }
