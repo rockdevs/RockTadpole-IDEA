@@ -14,7 +14,7 @@ import java.awt.{BorderLayout, Dimension}
 class IntroGScreen(name:String) extends MonoGFrame(name:String) {
   private var STATE: State[IntroState] = null
   private val  westPanel : GPanel = new IntroWestPanel(this)
-  private val mainPanel : GPanel = new IntroMainPanel
+   private val mainPanel : GPanel = new IntroMainPanel
 
   
   {

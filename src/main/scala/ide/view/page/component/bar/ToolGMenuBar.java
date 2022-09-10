@@ -90,7 +90,7 @@ public class ToolGMenuBar extends GMenuBar {
         this.newItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new NewProjectPanel().compile();
+                new NewProjectPanel("New Project").compile();
             }
         });
     }

@@ -1,6 +1,7 @@
 package az.rock.ide.view.util;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -26,5 +27,15 @@ public class ImageProvider {
         }
         return null;
     }
+
+    public static Icon getIcon(String path){
+        try {
+            return new ImageIcon(ImageIO.read(new File(path)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 
 }

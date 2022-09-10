@@ -7,8 +7,9 @@ import az.rock.ide.view.page.screen.intro.IntroGScreen;
 import az.rock.ide.view.page.screen.main.MainGScreen;
 import az.rock.ide.view.ui.factory.abstracts.AbstractScreenFactory;
 import az.rock.ide.view.ui.factory.concretes.ScreenFactory;
+import az.rock.ide.view.ui.frame.GFrame;
 import com.formdev.flatlaf.FlatDarculaLaf;
-
+import az.rock.ide.view.page.screen.settings.MainSettingsGFrame;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +29,7 @@ public class RunnableApplication implements RockApplication {
     private final List<Callable<Boolean>> callables = new ArrayList<>();
 
     private final SplashGScreen splashGScreen = this.screenFactory.factorySplashGScreen();
-    private final IntroGScreen introGScreen = new IntroGScreen("Open Project");
+    private final MainSettingsGFrame introGScreen = new MainSettingsGFrame();
 
     private final Callable<Boolean> mainCallable = ()->{
         Thread.sleep(1000);
@@ -45,8 +46,6 @@ public class RunnableApplication implements RockApplication {
 
     @Override
     public void run(String... args) {
-//        Thread splashTread = new Thread(runnableSplash);
-//        splashTread.start();
         try {
             Thread introThread = new Thread(runnableIntroScreen);
             introThread.start();

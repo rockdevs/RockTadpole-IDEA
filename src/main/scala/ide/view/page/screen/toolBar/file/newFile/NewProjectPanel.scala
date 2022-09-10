@@ -16,7 +16,7 @@ import java.awt.{BorderLayout, Dimension, FlowLayout}
 import java.util.PriorityQueue
 import javax.swing.{JButton, JPanel}
 
-class NewProjectPanel extends MonoGFrame{
+class NewProjectPanel(name:String) extends MonoGFrame(name:String){
   private var STATE: State[IntroState] = null
 
   private var panels: PriorityQueue[GPanel] = new PriorityQueue[GPanel]()

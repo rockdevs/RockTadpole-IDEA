@@ -3,11 +3,7 @@ package ide.view.ui.frame
 
 import java.awt.{BorderLayout, Dimension}
 
-abstract class MonoGFrame extends GFrame{
-  def this(name:String) = {
-    this()
-    this.setName("Open Project")
-  }
+abstract class MonoGFrame(name:String) extends GFrame(name:String){
 
   {
     this.setSize(new Dimension(700,600));
