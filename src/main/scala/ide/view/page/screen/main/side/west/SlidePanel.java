@@ -1,18 +1,20 @@
 package az.rock.ide.view.page.screen.main.side.west;
 
 import az.rock.ide.view.page.lib.panel.GPanel;
+import az.rock.ide.view.page.screen.main.side.west.childPanel.AbstractSideChildGPanel;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 
 public class SlidePanel extends GPanel {
+    private GPanel parent;
     private GPanel topPanel = null;
-    private GPanel mainPanel = null;
+    private AbstractSideChildGPanel mainPanel = null;
 
-    public SlidePanel(JPanel parent){
-        this.topPanel = new SlideTopPanel(new JLabel(" Project Manager"),this);
-        this.mainPanel = new SlideMainPanel(this);
+    public SlidePanel(AbstractSideChildGPanel showPanel){
+        super();
+        this.mainPanel = showPanel;
+        this.topPanel = new SlideTopPanel(new JLabel(showPanel.getTitle()),this);
         this.setBorder(BorderFactory.createEtchedBorder());
         this.setLayout(new BorderLayout());
         this.add(this.topPanel,BorderLayout.NORTH);
@@ -28,6 +30,7 @@ public class SlidePanel extends GPanel {
 
     @Override
     public void postConst() {
-
+        
     }
+
 }

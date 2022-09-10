@@ -6,6 +6,7 @@ public enum ConsoleColor {
     GREEN("\u001B[32m"),
     CYAN("\u001B[36m"),
     WHITE("\u001B[37m"),
+    YELLOW("\u001B[33m"),
     B_YELLOW("\u001B[43m");
 
     private String color;

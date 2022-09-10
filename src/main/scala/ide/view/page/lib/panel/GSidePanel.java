@@ -4,14 +4,9 @@ import az.rock.ide.engine.concretes.task.Initializer;
 import az.rock.ide.view.page.screen.Loadable;
 import javax.swing.*;
 
-public abstract class GSidePanel extends JPanel implements Initializer, Loadable {
+public abstract class GSidePanel extends GPanel {
     public GSidePanel(){
         super();
     }
 
-    @Override
-    public void init() {
-        this.postConst();
-        this.componentInitializer();
-    }
 }

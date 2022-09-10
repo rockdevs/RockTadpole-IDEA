@@ -7,10 +7,8 @@ import java.util.Date;
 public class Logger {
     public static void info(AWTEvent event){
         System.out.println(ConsoleColor.RESET.getColor() +
-                ConsoleColor.GREEN.getColor() + "[LOG INFO  " + new Date().toString() + "] : -> ".concat(
-                        ConsoleColor.CYAN.getColor() + event.getID() + " : " +  event.toString() + " "
-                ).concat(
-                         ConsoleColor.WHITE.getColor() + event.getSource()+ " " +  event.paramString()
+                ConsoleColor.GREEN.getColor() + "[LOG INFO  " + new Date().toString() + " ] : -> ".concat(
+                        ConsoleColor.YELLOW.getColor() + event.getID() + " : " +  event.toString() + " - Class : " + event.getClass()
                 )
         );
     }

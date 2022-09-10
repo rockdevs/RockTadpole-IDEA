@@ -1,7 +1,11 @@
 package az.rock.ide.view.page.screen.main.side.west;
 
+import az.rock.ide.jobs.abst.Logger;
 import az.rock.ide.view.page.lib.button.GSimpleButton;
 import az.rock.ide.view.page.lib.panel.GSidePanel;
+import az.rock.ide.view.page.screen.main.side.west.childPanel.AbstractSideChildGPanel;
+import az.rock.ide.view.page.screen.main.side.west.childPanel.FreeSideChildPanel;
+import az.rock.ide.view.page.screen.main.side.west.childPanel.NavigatorSideGPanel;
 import az.rock.ide.view.ui.button.GButton;
 import az.rock.ide.view.ui.icon.enums.GIconBar;
 
@@ -18,7 +22,7 @@ public class WestPanel extends GSidePanel {
     private final GButton structuresButton = new GSimpleButton(GIconBar.DESKTOP);
 
     private final JToolBar toolBar = new JToolBar("Navigator",JToolBar.VERTICAL);
-    private final SlidePanel slidePanel = new SlidePanel(this);
+    private SlidePanel slidePanel;
 
     {
         Stream.of(projectButton,bookmarksButton,structuresButton)
@@ -26,6 +30,7 @@ public class WestPanel extends GSidePanel {
     }
 
     public WestPanel() {
+        this.slidePanel = new SlidePanel(new FreeSideChildPanel());
         this.setLayout(new BorderLayout());
         this.add(toolBar,BorderLayout.WEST);
         this.add(this.slidePanel,BorderLayout.EAST);
@@ -36,16 +41,21 @@ public class WestPanel extends GSidePanel {
         this.add(button);
     }
 
-    private final ActionListener visibleSlidePanel = (e -> {
+    private final void visibleSlidePanel(AbstractSideChildGPanel childGPanel) {
+        this.slidePanel = new SlidePanel(childGPanel);
         this.slidePanel.setVisible(!this.slidePanelVisibility);
         this.slidePanelVisibility = !this.slidePanelVisibility;
-    });
+    };
 
     @Override
     public void postConst() {
-        Stream.of(this.projectButton,this.bookmarksButton,this.structuresButton)
-                .forEach(e->e.addActionListener(visibleSlidePanel));
-
+        this.projectButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Logger.info(e);
+                visibleSlidePanel(new NavigatorSideGPanel());
+            }
+        });
     }
 
     @Override
@@ -53,4 +63,5 @@ public class WestPanel extends GSidePanel {
         this.slidePanel.init();
         this.slidePanel.setVisible(slidePanelVisibility);
     }
+
 }

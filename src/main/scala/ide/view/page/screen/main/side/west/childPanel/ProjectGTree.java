@@ -1,4 +1,4 @@
-package az.rock.ide.view.page.screen.main.side.west;
+package az.rock.ide.view.page.screen.main.side.west.childPanel;
 
 import az.rock.ide.view.ui.icon.enums.GSettingsIcon;
 import az.rock.ide.view.util.ImageProvider;
@@ -9,7 +9,7 @@ import javax.swing.tree.DefaultTreeCellRenderer;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeModel;
 
-public class SlideProjectGTree extends JTree {
+public class ProjectGTree extends JTree {
 
     public static TreeModel getSettingTreeModel(){
         DefaultMutableTreeNode root = new DefaultMutableTreeNode("Project Navigator");
@@ -26,7 +26,7 @@ public class SlideProjectGTree extends JTree {
         return new DefaultTreeModel(root);
     }
 
-    public SlideProjectGTree(){
+    public ProjectGTree(){
         super(getSettingTreeModel());
         DefaultTreeCellRenderer renderer = (DefaultTreeCellRenderer) this.getCellRenderer();
         renderer.setLeafIcon(ImageProvider.getIcon(GSettingsIcon.LEFT.path()));

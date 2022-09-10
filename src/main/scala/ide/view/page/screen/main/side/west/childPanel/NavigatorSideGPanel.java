@@ -1,16 +1,15 @@
-package az.rock.ide.view.page.screen.main.side.west;
-
-import az.rock.ide.view.page.lib.panel.GPanel;
+package az.rock.ide.view.page.screen.main.side.west.childPanel;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class SlideMainPanel extends GPanel {
+public class NavigatorSideGPanel extends AbstractSideChildGPanel {
 
+    private final String title = " Project Manager";
     private final JScrollPane scrollPane;
-    private final JTree tree = new SlideProjectGTree();
+    private final JTree tree = new ProjectGTree();
 
-    public SlideMainPanel(JPanel parent){
+    public NavigatorSideGPanel(){
         super();
         this.setLayout(new BorderLayout());
         this.scrollPane = new JScrollPane(this.tree);
@@ -25,5 +24,10 @@ public class SlideMainPanel extends GPanel {
     @Override
     public void postConst() {
 
+    }
+
+    @Override
+    public String getTitle() {
+        return title;
     }
 }
