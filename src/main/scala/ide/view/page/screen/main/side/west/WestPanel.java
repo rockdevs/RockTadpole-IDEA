@@ -18,7 +18,7 @@ public class WestPanel extends GSidePanel {
     private final GButton structuresButton = new GSimpleButton(GIconBar.DESKTOP);
 
     private final JToolBar toolBar = new JToolBar("Navigator",JToolBar.VERTICAL);
-    private final SlidePanel slidePanel = new SlidePanel();
+    private final SlidePanel slidePanel = new SlidePanel(this);
 
     {
         Stream.of(projectButton,bookmarksButton,structuresButton)

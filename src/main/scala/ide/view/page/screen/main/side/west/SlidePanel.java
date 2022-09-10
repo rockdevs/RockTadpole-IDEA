@@ -7,14 +7,16 @@ import javax.swing.border.Border;
 import java.awt.*;
 
 public class SlidePanel extends GPanel {
-    private final GPanel topPanel = new SlideTopPanel();
-    private final GPanel mainPanel = new SlideMainPanel();
+    private GPanel topPanel = null;
+    private GPanel mainPanel = null;
 
-    public SlidePanel(){
+    public SlidePanel(JPanel parent){
+        this.topPanel = new SlideTopPanel(new JLabel(" Project Manager"),this);
+        this.mainPanel = new SlideMainPanel(this);
         this.setBorder(BorderFactory.createEtchedBorder());
         this.setLayout(new BorderLayout());
         this.add(this.topPanel,BorderLayout.NORTH);
-        this.add(this.mainPanel,BorderLayout.SOUTH);
+        this.add(this.mainPanel,BorderLayout.CENTER);
         this.setPreferredSize(new Dimension(300,500));
     }
 

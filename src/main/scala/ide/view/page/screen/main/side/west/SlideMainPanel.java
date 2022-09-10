@@ -10,7 +10,7 @@ public class SlideMainPanel extends GPanel {
     private final JScrollPane scrollPane;
     private final JTree tree = new SlideProjectGTree();
 
-    public SlideMainPanel(){
+    public SlideMainPanel(JPanel parent){
         super();
         this.setLayout(new BorderLayout());
         this.scrollPane = new JScrollPane(this.tree);
