@@ -42,6 +42,14 @@ public class SlideTopPanel extends GPanel {
     public void postConst() {
 
     }
+    
+    public void addCLoseActionListener(ActionListener actionListener){
+        closeButton.addActionListener(actionListener);
+    }
+    
+    public void addHideActionListener(ActionListener actionListener){
+        this.hideButton.addActionListener(actionListener);
+    }
 
 
 }

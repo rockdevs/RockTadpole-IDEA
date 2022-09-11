@@ -38,8 +38,10 @@ public class WestPanel extends GSidePanel {
             }
         });
     }
+
+
     public WestPanel() {
-        this.slidePanel = new SlidePanel(new FreeSideChildPanel());
+        this.slidePanel = SlidePanel.factoryFreeSlidePanel(this);
         this.setLayout(new BorderLayout());
         this.add(toolBar,BorderLayout.WEST);
         this.add(this.slidePanel,BorderLayout.EAST);
@@ -51,12 +53,19 @@ public class WestPanel extends GSidePanel {
     }
 
     private final void visibleSlidePanel(AbstractSideChildGPanel childGPanel) {
-        this.slidePanel = new SlidePanel(new NavigatorSideGPanel());
+        this.changePanelComponent(childGPanel);
         this.slidePanel.setVisible(!this.slidePanelVisibility);
         this.slidePanelVisibility = !this.slidePanelVisibility;
         this.updateUI();
-        Logger.spec("Call visibleSlidePanel Method");
     };
+
+    public void changePanelComponent(AbstractSideChildGPanel childGPanel){
+        Logger.spec("Call visibleSlidePanel Method");
+        this.remove(this.slidePanel);
+        this.slidePanel = SlidePanel.factorySlidePanel(this,childGPanel);
+        this.add(this.slidePanel,BorderLayout.EAST);
+    }
+
 
     @Override
     public void postConst() {
@@ -68,5 +77,7 @@ public class WestPanel extends GSidePanel {
         this.slidePanel.init();
         this.slidePanel.setVisible(slidePanelVisibility);
     }
+
+
 
 }
