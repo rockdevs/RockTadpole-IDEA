@@ -4,7 +4,7 @@ import az.rock.ide.jobs.abst.Logger;
 import az.rock.ide.view.page.lib.button.GSimpleButton;
 import az.rock.ide.view.page.lib.panel.GSidePanel;
 import az.rock.ide.view.page.screen.main.side.west.childPanel.AbstractSideChildGPanel;
-import az.rock.ide.view.page.screen.main.side.west.childPanel.FreeSideChildPanel;
+import az.rock.ide.view.page.screen.main.side.west.childPanel.GitSideChieldPanel;
 import az.rock.ide.view.page.screen.main.side.west.childPanel.NavigatorSideGPanel;
 import az.rock.ide.view.ui.button.GButton;
 import az.rock.ide.view.ui.icon.enums.GIconBar;
@@ -18,14 +18,14 @@ import java.util.stream.Stream;
 public class WestPanel extends GSidePanel {
     private boolean slidePanelVisibility = false;
     private final GButton projectButton = new GSimpleButton(GIconBar.FOLDER);
-    private final GButton bookmarksButton = new GSimpleButton(GIconBar.CONFIG_FOLDER);
-    private final GButton structuresButton = new GSimpleButton(GIconBar.DESKTOP);
+    private final GButton mavenButton = new GSimpleButton(GIconBar.MAVEN);
+    private final GButton gitButton = new GSimpleButton(GIconBar.GIT);
 
     private final JToolBar toolBar = new JToolBar("Navigator",JToolBar.VERTICAL);
     private SlidePanel slidePanel;
 
     {
-        Stream.of(projectButton,bookmarksButton,structuresButton)
+        Stream.of(projectButton, mavenButton, gitButton)
                 .forEach(e->this.toolBar.add(e));
     }
 
@@ -33,15 +33,23 @@ public class WestPanel extends GSidePanel {
         this.projectButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Logger.spec("Call addActionListener Method");
+                Logger.spec("Call projectButton addActionListener Method");
                 visibleSlidePanel(new NavigatorSideGPanel());
+            }
+        });
+
+        this.gitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Logger.spec("Call extrButton addActionListener Method");
+                visibleSlidePanel(new GitSideChieldPanel());
             }
         });
     }
 
 
     public WestPanel() {
-        this.slidePanel = SlidePanel.factoryFreeSlidePanel(this);
+        this.slidePanel = SlidePanel.factoryFreeSlidePanel(this.slidePanel);
         this.setLayout(new BorderLayout());
         this.add(toolBar,BorderLayout.WEST);
         this.add(this.slidePanel,BorderLayout.EAST);
@@ -62,7 +70,7 @@ public class WestPanel extends GSidePanel {
     public void changePanelComponent(AbstractSideChildGPanel childGPanel){
         Logger.spec("Call visibleSlidePanel Method");
         this.remove(this.slidePanel);
-        this.slidePanel = SlidePanel.factorySlidePanel(this,childGPanel);
+        this.slidePanel = SlidePanel.factorySlidePanel(this.slidePanel,childGPanel);
         this.add(this.slidePanel,BorderLayout.EAST);
     }
 
