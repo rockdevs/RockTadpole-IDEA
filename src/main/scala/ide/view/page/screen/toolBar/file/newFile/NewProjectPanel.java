@@ -48,7 +48,6 @@ public class NewProjectPanel extends MonoGFrame {
     @Override
     public void componentInitializer() {
         this.priorityQueue.peek().init();
-        MigLayout migLayout = new MigLayout("","","");
 
     }
 }
