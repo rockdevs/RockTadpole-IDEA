@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class MainNewProjectPanel extends InnerQueuePanel{
 
-    private final MigLayout migLayout = new MigLayout("","[]10[center]","[center]10[]");
+    private final MigLayout migLayout = new MigLayout("fillx","[]10[]","[center]10[]");
 
     private final JLabel projectNameLabel = new JLabel("Project Name");
     private final JTextField projectNameField = new GTextField();
@@ -42,10 +42,10 @@ public class MainNewProjectPanel extends InnerQueuePanel{
         this.add(this.sdkField,"span, grow");
 
         this.add(this.gitLabel);
-        this.add(this.gitField);
+        this.add(this.gitField,"gap unrelated, left");
 
         this.add(this.sampleLabel);
-        this.add(this.sampleField,"span, grow");
+        this.add(this.sampleField,"span, grow, left");
 
         this.add(this.buildLabel);
         this.add(this.buildField);
