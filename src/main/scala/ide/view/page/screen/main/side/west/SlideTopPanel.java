@@ -35,7 +35,7 @@ public class SlideTopPanel extends GPanel {
 
     @Override
     public void componentInitializer() {
-        closeButton.addActionListener(new ClosePanelActionListener(this.parent));
+        closeButton.addActionListener(new ClosePanelActionListener((GPanel) this.parent));
     }
 
     @Override

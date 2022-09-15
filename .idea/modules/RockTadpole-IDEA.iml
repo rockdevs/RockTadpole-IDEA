@@ -15,6 +15,7 @@
     <orderEntry type="library" name="sbt: com.fifesoft:rsyntaxtextarea:3.2.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.formdev:flatlaf-intellij-themes:2.4:jar" level="project" />
     <orderEntry type="library" name="sbt: com.formdev:flatlaf:2.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.miglayout:miglayout:3.7.4:jar" level="project" />
     <orderEntry type="library" name="sbt: org.checkerframework:checker-qual:3.5.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.openjfx:javafx-base:20-ea+2:jar" level="project" />
     <orderEntry type="library" name="sbt: org.openjfx:javafx-base:20-ea+2:win:jar" level="project" />

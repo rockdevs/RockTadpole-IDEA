@@ -15,4 +15,6 @@ libraryDependencies += "org.postgresql" % "postgresql" % "42.5.0"
 libraryDependencies += "org.projectlombok" % "lombok" % "1.18.24"
 libraryDependencies += "com.fifesoft" % "rsyntaxtextarea" % "3.2.0"
 libraryDependencies += "org.openjfx" % "javafx-swing" % "20-ea+2"
+libraryDependencies += "com.miglayout" % "miglayout" % "3.7.4"
+
 

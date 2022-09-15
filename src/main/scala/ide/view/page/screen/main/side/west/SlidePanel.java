@@ -21,8 +21,8 @@ public class SlidePanel extends GPanel {
 
     public static SlidePanel factorySlidePanel(JPanel parent,AbstractSideChildGPanel childGPanel){
         SlidePanel slidePanel =  new SlidePanel(childGPanel);
-        slidePanel.addCLoseActionListener(new ClosePanelActionListener(parent));
-        slidePanel.addHideActionListener(new ClosePanelActionListener(parent));
+        slidePanel.addCLoseActionListener(new ClosePanelActionListener((GPanel) parent));
+        slidePanel.addHideActionListener(new ClosePanelActionListener((GPanel) parent));
         return slidePanel;
     }
 

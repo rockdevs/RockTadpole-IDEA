@@ -2,7 +2,7 @@ package az.rock.ide.view.page.screen.settings;
 
 import az.rock.ide.view.page.lib.panel.GSimplePanel;
 import az.rock.ide.view.page.screen.settings.mainPanels.*;
-import az.rock.ide.view.ui.frame.MonoGFrame;
+import az.rock.ide.view.ui.frame.*;
 
 import javax.swing.*;
 import java.awt.*;
