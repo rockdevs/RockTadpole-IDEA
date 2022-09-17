@@ -11,6 +11,8 @@ public enum GIconBar {
     CUT("src/main/scala/ide/view/ui/icon/png/menu-cut_dark.png"),
     COPY("src/main/scala/ide/view/ui/icon/png/copyOfFolder.png"),
     COMPARE_WITH("src/main/scala/ide/view/ui/icon/png/compare4MiddleBottom_dark.png"),
+    COLLAPSE("src/main/scala/ide/view/ui/icon/png/arrowCollapse_dark.png"),
+    EXPAND("src/main/scala/ide/view/ui/icon/png/arrowExpand_dark.png"),
     ADD(""),
     CANCEL("src/main/scala/ide/view/ui/icon/png/cancel.png"),
     HIDE("src/main/scala/ide/view/ui/icon/png/hide.png"),
