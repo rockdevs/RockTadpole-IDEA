@@ -49,6 +49,13 @@ public abstract class GFrame extends JFrame implements ActionListener, Compiler,
         });
     }
 
+    public void updateUI(){
+        SwingUtilities.updateComponentTreeUI(this);
+        this.invalidate();
+        this.validate();
+        this.repaint();
+    }
+
     public GFrame(String header){
         super(header);
     }

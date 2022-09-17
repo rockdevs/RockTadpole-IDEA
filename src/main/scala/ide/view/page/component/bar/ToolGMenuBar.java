@@ -2,7 +2,7 @@ package az.rock.ide.view.page.component.bar;
 
 import az.rock.ide.view.page.lib.bar.GMenuItem;
 import az.rock.ide.view.page.screen.intro.IntroGScreen;
-import az.rock.ide.view.page.screen.toolBar.file.newFile.NewProjectPanel;
+import az.rock.ide.view.page.screen.toolBar.file.newFile.NewProjectFrame;
 import az.rock.ide.view.ui.bar.GMenu;
 import az.rock.ide.view.ui.bar.GMenuBar;
 import az.rock.ide.view.ui.factory.abstracts.AbstractBarFactory;
@@ -90,7 +90,7 @@ public class ToolGMenuBar extends GMenuBar {
         this.newItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new NewProjectPanel("New Project").compile();
+                new NewProjectFrame("New Project").compile();
             }
         });
     }
