@@ -1,5 +1,6 @@
 package az.rock.ide.view.ui.frame;
 
+import javax.swing.*;
 import java.awt.*;
 public abstract class MonoGFrame extends GFrame{
 

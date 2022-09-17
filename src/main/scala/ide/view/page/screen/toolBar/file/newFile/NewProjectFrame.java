@@ -5,6 +5,8 @@ import az.rock.ide.view.page.lib.panel.GAccordionPanel;
 import az.rock.ide.view.page.lib.panel.GPanel;
 import az.rock.ide.view.page.lib.panel.GSimplePanel;
 import az.rock.ide.view.page.screen.intro.IntroWestPanel;
+import az.rock.ide.view.ui.DataObject;
+import az.rock.ide.view.ui.GLabelTextFiled;
 import az.rock.ide.view.ui.frame.MonoGFrame;
 import az.rock.ide.view.ui.button.*;
 import az.rock.ide.view.ui.textField.GTextField;
@@ -16,7 +18,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -118,6 +119,12 @@ enum ButtonOperation{
             previous.init();
             parentFrame.setCurrentMainPanel(previous);
         }
+    },
+    CREATE{
+        @Override
+        public void action(ActionEvent event, NewProjectFrame parentFrame) {
+            parentFrame.getPanelList().get(1).getData();
+        }
     };
 
     public abstract void action(ActionEvent event, NewProjectFrame parentFrame);
@@ -128,11 +135,29 @@ enum ButtonOperation{
 class ArtifactPanel extends InnerQueuePanel{
     private GPanel panel = new GSimplePanel();
     private GPanel accordionPanel;
+    private final MigLayout migLayout = new MigLayout("fillx","[]2[]","[center]10[]");
+
+    private final GLabelTextFiled artifactId = new GLabelTextFiled("Group Id: ");
+    private final GLabelTextFiled groupId = new GLabelTextFiled("Artifact Id: ");
+    private final GLabelTextFiled version = new GLabelTextFiled("Version: ");
+
+
 
     {
-        this.panel.add(new GSimpleButton("Hello"));
         this.setLayout(new BorderLayout());
+        this.panel.setLayout(this.migLayout);
+        this.panel.add(this.artifactId,"span, grow");
+        this.panel.add(this.groupId,"span, grow");
+        this.panel.add(this.version,"span, grow");
         this.add(new GAccordionPanel("Artifact",this.panel),BorderLayout.CENTER);
+
+    }
+
+    @Override
+    public DataObject getData() {
+        ArtifactPanelDataObject artifactPanelDataObject = new ArtifactPanelDataObject(this.artifactId.getContext(),groupId.getContext(),version.getContext());
+        System.out.println(artifactPanelDataObject.toString());
+        return artifactPanelDataObject;
     }
 
     @Override
@@ -142,9 +167,31 @@ class ArtifactPanel extends InnerQueuePanel{
 
     @Override
     public void componentInitializer() {
+
         this.panel.init();
     }
+
+    class ArtifactPanelDataObject implements DataObject {
+        private String artifactId;
+        private String groupId;
+        private String version;
+
+        public ArtifactPanelDataObject(String artifactId,String groupId,String version){
+            this.artifactId = artifactId;
+            this.version = version;
+            this.groupId = groupId;
+        }
+
+        @Override
+        public String toString() {
+            return this.artifactId + " " + this.groupId + " " + this.version;
+        }
+    }
 }
+
+
+
+
 
 class MainNewProjectPanel extends InnerQueuePanel{
 

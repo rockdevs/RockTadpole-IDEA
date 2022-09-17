@@ -35,7 +35,6 @@ public class GAccordionPanel extends GPanel{
         this.setLayout(new BorderLayout());
         this.add(this.headerPanel,BorderLayout.NORTH);
         this.add(this.bodyPanel,BorderLayout.CENTER);
-        this.add(this.seperator,BorderLayout.SOUTH);
     }
 
     {

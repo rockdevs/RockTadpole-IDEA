@@ -3,12 +3,14 @@ package az.rock.ide.view.page.lib.panel;
 import az.rock.ide.engine.concretes.task.Initializer;
 import az.rock.ide.jobs.abst.Logger;
 import az.rock.ide.view.page.screen.Loadable;
+import az.rock.ide.view.ui.DataObject;
+
 import javax.swing.*;
 import javax.swing.event.AncestorEvent;
 import javax.swing.event.AncestorListener;
 import java.awt.event.*;
 
-public abstract class GPanel extends JPanel implements Initializer, Loadable ,ActionListener{
+public abstract class GPanel extends JPanel implements Initializer, Loadable ,ActionListener,GResponse<DataObject>{
     public GPanel(){
         this.setVisible(true);
     }
@@ -81,5 +83,8 @@ public abstract class GPanel extends JPanel implements Initializer, Loadable ,Ac
         this.componentInitializer();
         this.updateUI();
     }
+    
+    
+     
 
 }
