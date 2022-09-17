@@ -1,6 +1,7 @@
 package az.rock.ide.view.page.screen.toolBar.file.newFile;
 
 
+import az.rock.ide.view.page.lib.panel.GAccordionPanel;
 import az.rock.ide.view.page.lib.panel.GPanel;
 import az.rock.ide.view.page.lib.panel.GSimplePanel;
 import az.rock.ide.view.page.screen.intro.IntroWestPanel;
@@ -125,7 +126,14 @@ enum ButtonOperation{
 
 
 class ArtifactPanel extends InnerQueuePanel{
+    private GPanel panel = new GSimplePanel();
+    private GPanel accordionPanel;
 
+    {
+        this.panel.add(new GSimpleButton("Hello"));
+        this.setLayout(new BorderLayout());
+        this.add(new GAccordionPanel("Artifact",this.panel),BorderLayout.CENTER);
+    }
 
     @Override
     public void postConst() {
@@ -134,7 +142,7 @@ class ArtifactPanel extends InnerQueuePanel{
 
     @Override
     public void componentInitializer() {
-
+        this.panel.init();
     }
 }
 

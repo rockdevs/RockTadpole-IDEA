@@ -1,6 +1,5 @@
 package az.rock.ide.view.page.lib.panel;
 
-import az.rock.ide.engine.concretes.ApplicationContainer;
 import az.rock.ide.engine.concretes.task.Initializer;
 import az.rock.ide.jobs.abst.Logger;
 import az.rock.ide.view.page.screen.Loadable;
@@ -72,7 +71,7 @@ public abstract class GPanel extends JPanel implements Initializer, Loadable ,Ac
         Logger.info(e);
     }
 
-    public void setState(){
+    public void updateState(){
         this.updateUI();
     }
 
