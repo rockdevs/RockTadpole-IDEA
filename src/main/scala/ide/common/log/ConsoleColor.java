@@ -1,4 +1,4 @@
-package az.rock.ide.jobs.abst;
+package az.rock.ide.common.log;
 
 public enum ConsoleColor {
     RESET("\u001B[0m"),

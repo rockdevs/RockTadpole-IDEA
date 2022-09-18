@@ -7,7 +7,7 @@ import az.rock.ide.view.ui.panel.GAccordionPanel;
 import az.rock.ide.view.ui.panel.GPanel;
 import az.rock.ide.view.ui.panel.GSimplePanel;
 import az.rock.ide.view.page.screen.intro.IntroWestPanel;
-import az.rock.ide.butterfly.common.DataObject;
+import az.rock.ide.butterfly.model.DataObject;
 import az.rock.ide.view.ui.combo.GComboBox;
 import az.rock.ide.view.ui.fileChooser.GFileChooserPanel;
 import az.rock.ide.view.ui.panel.ValidableInnerGPanel;

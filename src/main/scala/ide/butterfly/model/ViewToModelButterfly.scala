@@ -1,5 +1,5 @@
 package az.rock
-package ide.butterfly.common
+package ide.butterfly.model
 
 trait ViewToModelButterfly {
 

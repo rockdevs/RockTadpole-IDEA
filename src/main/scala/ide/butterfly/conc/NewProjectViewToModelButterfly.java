@@ -1,7 +1,7 @@
 package az.rock.ide.butterfly.conc;
 
 import az.rock.ide.butterfly.abst.AbstractNewProjectViewToModelButterfly;
-import az.rock.ide.jobs.abst.Logger;
+import az.rock.ide.common.log.Logger;
 import az.rock.ide.service.core.input.view.conc.NewProjectModelInputPort;
 
 public class NewProjectViewToModelButterfly  implements AbstractNewProjectViewToModelButterfly {

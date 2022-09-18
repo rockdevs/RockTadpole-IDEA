@@ -1,6 +1,6 @@
 package az.rock.ide.view.page.screen.main.side.west;
 
-import az.rock.ide.jobs.abst.Logger;
+import az.rock.ide.common.log.Logger;
 import az.rock.ide.view.ui.panel.GSidePanel;
 import az.rock.ide.view.page.screen.main.side.west.childPanel.AbstractSideChildGPanel;
 import az.rock.ide.view.page.screen.main.side.west.childPanel.GitSideChieldPanel;

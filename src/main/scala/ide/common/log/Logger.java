@@ -1,7 +1,6 @@
-package az.rock.ide.jobs.abst;
+package az.rock.ide.common.log;
 
 import java.awt.*;
-import java.time.LocalDate;
 import java.util.Date;
 
 public class Logger {

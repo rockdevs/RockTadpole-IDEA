@@ -1,8 +1,7 @@
 package az.rock.ide.engine.concretes;
 
-import az.rock.ide.jobs.abst.Logger;
+import az.rock.ide.common.log.Logger;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
