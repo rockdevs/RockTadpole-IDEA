@@ -1,4 +1,4 @@
-package az.rock.ide.view.page.lib.panel;
+package az.rock.ide.view.ui.panel;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

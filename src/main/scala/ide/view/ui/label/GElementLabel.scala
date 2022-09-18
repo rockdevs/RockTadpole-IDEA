@@ -1,5 +1,5 @@
 package az.rock
-package ide.view.page.lib.label
+package ide.view.ui.label
 
 import java.awt.Font
 

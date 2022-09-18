@@ -1,9 +1,8 @@
 package az.rock.ide.view.page.screen.main.side.south;
 
-import az.rock.ide.view.page.lib.panel.GSidePanel;
+import az.rock.ide.view.ui.panel.GSidePanel;
 
 import java.awt.*;
-import java.util.stream.Stream;
 
 public class SouthPanel extends GSidePanel {
     private final ButtonBarGroup buttonBarGroup = new ButtonBarGroup();

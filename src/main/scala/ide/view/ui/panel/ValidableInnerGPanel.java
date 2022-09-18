@@ -1,6 +1,6 @@
-package az.rock.ide.view.ui;
+package az.rock.ide.view.ui.panel;
 
-import az.rock.ide.view.page.lib.panel.GPanel;
+import az.rock.ide.view.ui.panel.GPanel;
 
 public abstract class ValidableInnerGPanel extends GPanel  {
     public abstract boolean valid();

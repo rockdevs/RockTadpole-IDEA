@@ -1,7 +1,7 @@
 package az.rock.ide.view.page.screen.main.central;
 
 import az.rock.ide.engine.concretes.task.Initializer;
-import az.rock.ide.view.page.lib.panel.GPanel;
+import az.rock.ide.view.ui.panel.GPanel;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,10 +1,9 @@
 package az.rock.ide.view.page.screen.main.side.west;
 
-import az.rock.ide.view.page.lib.panel.GPanel;
+import az.rock.ide.view.ui.panel.GPanel;
 import az.rock.ide.view.page.screen.actions.ClosePanelActionListener;
 import az.rock.ide.view.page.screen.main.side.west.childPanel.AbstractSideChildGPanel;
 import az.rock.ide.view.page.screen.main.side.west.childPanel.FreeSideChildPanel;
-import az.rock.ide.view.page.screen.main.side.west.childPanel.NavigatorSideGPanel;
 
 import javax.swing.*;
 import java.awt.*;

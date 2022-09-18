@@ -1,7 +1,5 @@
 package az.rock.ide.view.ui.frame;
 
-import az.rock.ide.view.page.lib.frame.GWindow;
-
 import java.awt.*;
 import java.awt.geom.RoundRectangle2D;
 

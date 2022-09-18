@@ -1,6 +1,6 @@
 package az.rock.ide.view.page.screen.main.side.east;
 
-import az.rock.ide.view.page.lib.panel.GSidePanel;
+import az.rock.ide.view.ui.panel.GSidePanel;
 
 public class EastPanel extends GSidePanel {
     @Override

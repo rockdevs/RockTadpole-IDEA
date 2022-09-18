@@ -1,6 +1,6 @@
-package az.rock.ide.view.ui;
+package az.rock.ide.view.ui.fileChooser;
 
-import az.rock.ide.view.page.lib.panel.GSimplePanel;
+import az.rock.ide.view.ui.panel.GSimplePanel;
 import az.rock.ide.view.ui.button.GButton;
 import az.rock.ide.view.ui.button.GIconButton;
 import az.rock.ide.view.ui.icon.enums.GIconBar;

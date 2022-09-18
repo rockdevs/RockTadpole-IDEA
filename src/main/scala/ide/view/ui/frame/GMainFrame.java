@@ -1,6 +1,6 @@
 package az.rock.ide.view.ui.frame;
 
-import az.rock.ide.view.page.component.bar.ToolGMenuBar;
+import az.rock.ide.view.ui.bar.ToolGMenuBar;
 
 import java.awt.*;
 

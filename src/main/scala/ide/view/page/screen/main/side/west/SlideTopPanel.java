@@ -1,6 +1,6 @@
 package az.rock.ide.view.page.screen.main.side.west;
 
-import az.rock.ide.view.page.lib.panel.GPanel;
+import az.rock.ide.view.ui.panel.GPanel;
 import az.rock.ide.view.ui.button.GButton;
 import az.rock.ide.view.ui.button.GIconButton;
 import az.rock.ide.view.ui.icon.enums.GIconBar;
@@ -8,7 +8,6 @@ import az.rock.ide.view.page.screen.actions.*;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class SlideTopPanel extends GPanel {

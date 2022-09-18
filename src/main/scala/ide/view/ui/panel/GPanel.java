@@ -1,4 +1,4 @@
-package az.rock.ide.view.page.lib.panel;
+package az.rock.ide.view.ui.panel;
 
 import az.rock.ide.engine.concretes.task.Initializer;
 import az.rock.ide.jobs.abst.Logger;

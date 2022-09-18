@@ -1,7 +1,7 @@
 package az.rock.ide.view.page.screen;
 
-import az.rock.ide.view.page.lib.panel.PicPanel;
-import az.rock.ide.view.page.lib.panel.TransparentPanel;
+import az.rock.ide.view.ui.panel.PicPanel;
+import az.rock.ide.view.ui.panel.TransparentPanel;
 import az.rock.ide.view.ui.frame.GSplashFrame;
 import az.rock.ide.view.util.ImageProvider;
 

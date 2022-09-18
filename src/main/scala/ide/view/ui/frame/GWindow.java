@@ -1,4 +1,4 @@
-package az.rock.ide.view.page.lib.frame;
+package az.rock.ide.view.ui.frame;
 
 import javax.swing.*;
 import az.rock.ide.view.page.screen.Loadable;

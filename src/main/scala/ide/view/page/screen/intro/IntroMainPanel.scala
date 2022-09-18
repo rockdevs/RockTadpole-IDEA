@@ -1,11 +1,11 @@
 package az.rock
 package ide.view.page.screen.intro
 
-import ide.view.page.lib.panel.GSimplePanel
 import az.rock.ide.view.ui.button._
 import java.awt.{BorderLayout, Component, ComponentOrientation, Dimension, GridBagLayout, GridLayout}
 import javax.swing.{BorderFactory, Box, BoxLayout, SwingConstants}
 import az.rock.ide.view.ui.icon.enums.GIconBar
+import az.rock.ide.view.ui.panel.GSimplePanel
 
 class IntroMainPanel extends GSimplePanel{
 

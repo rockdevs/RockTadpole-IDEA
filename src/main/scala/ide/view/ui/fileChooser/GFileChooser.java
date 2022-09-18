@@ -1,4 +1,4 @@
-package az.rock.ide.view.ui;
+package az.rock.ide.view.ui.fileChooser;
 
 import javax.swing.*;
 

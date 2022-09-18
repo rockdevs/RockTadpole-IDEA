@@ -1,4 +1,4 @@
-package az.rock.ide.view.page.component.bar;
+package az.rock.ide.view.ui.bar;
 
 import az.rock.ide.view.ui.bar.GMenuItem;
 import az.rock.ide.view.page.screen.intro.IntroGScreen;

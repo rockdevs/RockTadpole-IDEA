@@ -6,8 +6,8 @@ import ide.view.state.model.IntroState
 import ide.view.ui.frame.{GFrame, GMainFrame}
 
 import az.rock.ide.view.page.screen.intro.IntroWestPanel
-import az.rock.ide.view.page.lib.panel.{GPanel, GSimplePanel}
 import az.rock.ide.view.ui.frame.MonoGFrame
+import az.rock.ide.view.ui.panel.{GPanel, GSimplePanel}
 
 import java.awt.event.ActionEvent
 import java.awt.{BorderLayout, Dimension}

@@ -1,7 +1,7 @@
 package az.rock.ide.view.ui.factory.abstracts;
 
 import az.rock.ide.common.Factory;
-import az.rock.ide.view.page.component.bar.ToolGMenuBar;
+import az.rock.ide.view.ui.bar.ToolGMenuBar;
 import az.rock.ide.view.ui.bar.GMenu;
 import az.rock.ide.view.ui.bar.GMenuItem;
 import az.rock.ide.view.ui.bar.LargeGMenuItem;

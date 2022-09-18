@@ -2,7 +2,6 @@ package az.rock.ide.view.ui.frame;
 
 import az.rock.ide.engine.concretes.ApplicationContainer;
 import az.rock.ide.jobs.abst.Logger;
-import az.rock.ide.view.page.lib.frame.Compiler;
 import az.rock.ide.view.page.screen.Loadable;
 import javax.swing.*;
 import java.awt.event.*;
