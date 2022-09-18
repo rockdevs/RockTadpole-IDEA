@@ -1,4 +1,4 @@
-package az.rock.ide.view.ui;
+package az.rock.ide.view.ui.textField;
 
 import az.rock.ide.view.page.lib.panel.GSimplePanel;
 import lombok.Data;

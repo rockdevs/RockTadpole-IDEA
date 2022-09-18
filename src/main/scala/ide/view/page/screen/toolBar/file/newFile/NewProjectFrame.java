@@ -6,7 +6,10 @@ import az.rock.ide.view.page.lib.panel.GPanel;
 import az.rock.ide.view.page.lib.panel.GSimplePanel;
 import az.rock.ide.view.page.screen.intro.IntroWestPanel;
 import az.rock.ide.view.ui.DataObject;
-import az.rock.ide.view.ui.GLabelTextFiled;
+import az.rock.ide.view.ui.GFileChooser;
+import az.rock.ide.view.ui.GFileChooserPanel;
+import az.rock.ide.view.ui.icon.enums.GIconBar;
+import az.rock.ide.view.ui.textField.GLabelTextFiled;
 import az.rock.ide.view.ui.frame.MonoGFrame;
 import az.rock.ide.view.ui.button.*;
 import az.rock.ide.view.ui.textField.GTextField;
@@ -15,6 +18,8 @@ import lombok.Getter;
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -141,6 +146,12 @@ class ArtifactPanel extends InnerQueuePanel{
     private final GLabelTextFiled groupId = new GLabelTextFiled("Artifact Id: ");
     private final GLabelTextFiled version = new GLabelTextFiled("Version: ");
 
+    {
+        //Default values
+        this.artifactId.getTextField().setText("Example");
+        this.groupId.getTextField().setText("com.example.ws");
+        this.version.getTextField().setText("1.0 SNAPSHOT");
+    }
 
 
     {
@@ -201,7 +212,7 @@ class MainNewProjectPanel extends InnerQueuePanel{
     private final JTextField projectNameField = new GTextField();
 
     private final JLabel locationLabel = new JLabel("Location");
-    private final JTextField locationField = new GTextField();
+    private final GPanel locationField = new GFileChooserPanel(this);
 
     private final JLabel sdkLabel = new JLabel("SDK : ");
     private final JTextField sdkField = new GTextField();
@@ -217,6 +228,13 @@ class MainNewProjectPanel extends InnerQueuePanel{
 
     private final JLabel langLabel = new JLabel("Language");
     private final JTextField langField = new GTextField();
+
+    {
+        //Default values
+        this.projectNameField.setText("Example");
+
+
+    }
 
     {
         this.setLayout(this.migLayout);
