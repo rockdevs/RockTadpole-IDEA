@@ -9,6 +9,7 @@ import az.rock.ide.view.page.screen.intro.IntroWestPanel
 import az.rock.ide.view.page.lib.panel.{GPanel, GSimplePanel}
 import az.rock.ide.view.ui.frame.MonoGFrame
 
+import java.awt.event.ActionEvent
 import java.awt.{BorderLayout, Dimension}
 
 class IntroGScreen(name:String) extends MonoGFrame(name:String) {
@@ -37,4 +38,7 @@ class IntroGScreen(name:String) extends MonoGFrame(name:String) {
 
   }
 
+  override def actionPerformed(e: ActionEvent): Unit = {
+
+  }
 }

@@ -24,6 +24,7 @@ public class RunnableApplication implements RockApplication {
             JOptionPane.showMessageDialog(new JFrame("Error")," There was exception while initialize windows");
         }
     }
+    
     private final AbstractScreenFactory screenFactory = new ScreenFactory();
     private final ExecutorService executorService =  Executors.newFixedThreadPool(5);
     private final List<Callable<Boolean>> callables = new ArrayList<>();

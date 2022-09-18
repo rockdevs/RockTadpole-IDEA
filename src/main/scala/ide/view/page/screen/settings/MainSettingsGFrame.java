@@ -6,6 +6,7 @@ import az.rock.ide.view.ui.frame.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
 public class MainSettingsGFrame extends MonoGFrame {
 
@@ -32,6 +33,11 @@ public class MainSettingsGFrame extends MonoGFrame {
 
     @Override
     public void postConst() {
+
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
 
     }
 }

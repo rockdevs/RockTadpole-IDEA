@@ -2,11 +2,14 @@ package az.rock.ide.view.page.screen.main
 
 import az.rock.ide.view.ui.frame.GMainFrame
 import az.rock.ide.view.ui.icon.enums.GIconBar
+
 import javax.imageio.ImageIO
-import javax.swing._
+import javax.swing.*
 import java.io.File
 import java.io.IOException
 import az.rock.ide.view.state.model.MainState
+
+import java.awt.event.ActionEvent
 
 object MainGScreen {
   private val STATE = MainState.factory
@@ -28,5 +31,9 @@ class MainGScreen(val header: String) extends GMainFrame(header) {
   catch {
     case e: IOException =>
       JOptionPane.showMessageDialog(new JFrame("Error"), "Init Application Icon exception")
+  }
+
+  override def actionPerformed(e: ActionEvent): Unit = {
+
   }
 }

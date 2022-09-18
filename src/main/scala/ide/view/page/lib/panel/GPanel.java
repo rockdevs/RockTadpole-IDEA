@@ -3,7 +3,7 @@ package az.rock.ide.view.page.lib.panel;
 import az.rock.ide.engine.concretes.task.Initializer;
 import az.rock.ide.jobs.abst.Logger;
 import az.rock.ide.view.page.screen.Loadable;
-import az.rock.ide.view.ui.DataObject;
+import az.rock.ide.butterfly.common.DataObject;
 
 import javax.swing.*;
 import javax.swing.event.AncestorEvent;

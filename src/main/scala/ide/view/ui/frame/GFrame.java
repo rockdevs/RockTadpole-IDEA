@@ -28,12 +28,12 @@ public abstract class GFrame extends JFrame implements ActionListener, Compiler,
 
             @Override
             public void windowIconified(WindowEvent e) {
-                Logger.info(e);
+                //Logger.info(e);
             }
 
             @Override
             public void windowDeiconified(WindowEvent e) {
-                Logger.info(e);
+                //Logger.info(e);
             }
 
             @Override
@@ -44,7 +44,7 @@ public abstract class GFrame extends JFrame implements ActionListener, Compiler,
 
             @Override
             public void windowDeactivated(WindowEvent e) {
-                Logger.info(e);
+                //Logger.info(e);
             }
         });
     }
@@ -68,11 +68,6 @@ public abstract class GFrame extends JFrame implements ActionListener, Compiler,
         this.postConst();
         this.componentInitializer();
         this.setVisible(true);
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        System.out.println(e.getActionCommand());
     }
 
 }
