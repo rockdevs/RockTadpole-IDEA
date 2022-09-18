@@ -1,5 +1,5 @@
 package az.rock
-package ide.service.core.input.handler
+package ide.service.core.api.input.handler
 
 class GeneralExceptionHandler {
 

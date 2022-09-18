@@ -1,4 +1,4 @@
-package az.rock.ide.service.anno;
+package az.rock.ide.service.annotation;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
