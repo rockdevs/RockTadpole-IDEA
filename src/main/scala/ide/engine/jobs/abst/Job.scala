@@ -1,5 +1,5 @@
 package az.rock
-package ide.jobs.abst
+package ide.engine.jobs.abst
 
 trait Job {
   def run():Unit;
