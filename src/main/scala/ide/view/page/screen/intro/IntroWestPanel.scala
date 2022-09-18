@@ -3,7 +3,7 @@ package ide.view.page.screen.intro
 
 import ide.view.page.lib.panel.{GPanel, GSimplePanel}
 
-import az.rock.ide.view.page.screen.toolBar.file.other.{ExitActionListener, GActionListener}
+import az.rock.ide.view.page.screen.toolBar.file.other.GActionListener
 import az.rock.ide.view.ui.button.GSimpleButton
 import az.rock.ide.view.ui.frame.GFrame
 import az.rock.ide.view.ui.icon.enums.GIconBar
