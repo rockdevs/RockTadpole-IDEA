@@ -1,6 +1,6 @@
 package az.rock.ide.view.page.component.bar;
 
-import az.rock.ide.view.page.lib.bar.GMenuItem;
+import az.rock.ide.view.ui.bar.GMenuItem;
 import az.rock.ide.view.page.screen.intro.IntroGScreen;
 import az.rock.ide.view.page.screen.toolBar.file.newFile.NewProjectFrame;
 import az.rock.ide.view.ui.bar.GMenu;

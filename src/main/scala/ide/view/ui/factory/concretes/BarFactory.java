@@ -1,8 +1,10 @@
 package az.rock.ide.view.ui.factory.concretes;
 
 import az.rock.ide.view.page.component.bar.ToolGMenuBar;
-import az.rock.ide.view.page.lib.bar.*;
 import az.rock.ide.view.ui.bar.GMenu;
+import az.rock.ide.view.ui.bar.GMenuItem;
+import az.rock.ide.view.ui.bar.LargeGMenuItem;
+import az.rock.ide.view.ui.bar.ListGMenuItem;
 import az.rock.ide.view.ui.factory.abstracts.AbstractBarFactory;
 import az.rock.ide.view.ui.icon.enums.GIconBar;
 import az.rock.ide.view.util.ImageProvider;

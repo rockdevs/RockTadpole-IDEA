@@ -1,4 +1,4 @@
-package az.rock.ide.view.page.lib.bar;
+package az.rock.ide.view.ui.bar;
 
 import az.rock.ide.engine.concretes.task.Initializer;
 import az.rock.ide.view.page.screen.Loadable;

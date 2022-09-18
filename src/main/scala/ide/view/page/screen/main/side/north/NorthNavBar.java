@@ -1,6 +1,6 @@
 package az.rock.ide.view.page.screen.main.side.north;
 
-import az.rock.ide.view.page.lib.bar.NavigableGBar;
+import az.rock.ide.view.ui.bar.NavigableGBar;
 import az.rock.ide.view.page.lib.other.GComboBox;
 import az.rock.ide.view.ui.button.GButton;
 import az.rock.ide.view.ui.button.GIconButton;

@@ -1,4 +1,4 @@
-package az.rock.ide.view.page.lib.bar;
+package az.rock.ide.view.ui.bar;
 
 import javax.swing.*;
 import java.awt.*;
