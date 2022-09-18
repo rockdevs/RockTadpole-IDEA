@@ -28,6 +28,7 @@ public class GFileChooserPanel extends GSimplePanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int result = fileChooser.showOpenDialog(parent);
+                textField.setText(fileChooser.getSelectedFile().getAbsolutePath());
             }
         });
     }

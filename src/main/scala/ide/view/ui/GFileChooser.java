@@ -7,6 +7,7 @@ public class GFileChooser extends JFileChooser {
 
     {
         this.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        this.setApproveButtonText("Select");
     }
 
     public GFileChooser(JPanel parent){
