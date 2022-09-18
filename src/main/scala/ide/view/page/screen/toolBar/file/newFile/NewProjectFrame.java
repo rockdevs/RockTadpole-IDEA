@@ -6,6 +6,7 @@ import az.rock.ide.view.page.lib.panel.GPanel;
 import az.rock.ide.view.page.lib.panel.GSimplePanel;
 import az.rock.ide.view.page.screen.intro.IntroWestPanel;
 import az.rock.ide.view.ui.DataObject;
+import az.rock.ide.view.ui.GComboBox;
 import az.rock.ide.view.ui.GFileChooser;
 import az.rock.ide.view.ui.GFileChooserPanel;
 import az.rock.ide.view.ui.icon.enums.GIconBar;
@@ -215,7 +216,7 @@ class MainNewProjectPanel extends InnerQueuePanel{
     private final GPanel locationField = new GFileChooserPanel(this);
 
     private final JLabel sdkLabel = new JLabel("SDK : ");
-    private final JTextField sdkField = new GTextField();
+    private final GComboBox<String> sdkField = new GComboBox<>(new String[]{"OpenJDK 17","Amazon Corrento 11"});
 
     private final JLabel gitLabel = new JLabel("Git repository?");
     private final JCheckBox gitField = new JCheckBox();
@@ -224,15 +225,14 @@ class MainNewProjectPanel extends InnerQueuePanel{
     private final JCheckBox sampleField = new JCheckBox();
 
     private final JLabel buildLabel = new JLabel("Build Tool");
-    private final JTextField buildField = new GTextField();
+    private final GComboBox<String> buildField = new GComboBox<>(new String[]{"Maven","Gradle"});
 
     private final JLabel langLabel = new JLabel("Language");
-    private final JTextField langField = new GTextField();
+    private final GComboBox<String> langField = new GComboBox<>(new String[]{"Java","Scala","Go"});
 
     {
         //Default values
         this.projectNameField.setText("Example");
-
 
     }
 
