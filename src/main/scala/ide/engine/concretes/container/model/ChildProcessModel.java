@@ -22,12 +22,9 @@ public class ChildProcessModel {
     }
 
     public static ChildProcessModel buildProcess(UUID parentUUID,ChildProcess process){
-        ProcessContainer.register();
-        return new ChildProcessModel(parentUUID,process);
-    }
-
-    public static ParentProcessModel buildProcess(Process process){
-        return new ParentProcessModel(process);
+        ChildProcessModel childProcessModel = new ChildProcessModel(parentUUID,process);
+        ProcessContainer.register(childProcessModel);
+        return childProcessModel;
     }
 
     public void addChildProcess(ChildProcess childProcess){

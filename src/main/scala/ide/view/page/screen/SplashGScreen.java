@@ -33,6 +33,11 @@ public class SplashGScreen extends GSplashFrame implements Process {
     }
 
     @Override
+    public void disposeProcess() {
+
+    }
+
+    @Override
     public void postConst() {
         this.mainPanel.setLayout(new BorderLayout());
         this.mainPanel.add(this.getContextPanel(),BorderLayout.NORTH);

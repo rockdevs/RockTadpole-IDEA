@@ -17,7 +17,7 @@ public class ParentProcessModel extends ProcessModel{
     private ParentProcessModel(Process process){
         super();
         this.process = process;
-        Logger.spec("ProcessModel was initialized with ID : ".concat(this.uuid.toString()));
+        Logger.spec("ProcessModel was initialized with ID : ".concat(super.getUuid().toString()));
     }
 
 
@@ -26,6 +26,7 @@ public class ParentProcessModel extends ProcessModel{
     }
 
     public void addChildProcess(ChildProcess childProcess){
+        //childProcess.
         this.subProcess.add(childProcess);
     }
 

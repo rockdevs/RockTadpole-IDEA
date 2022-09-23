@@ -25,6 +25,7 @@ public class MainSettingsGFrame extends MonoGFrame {
     }
 
 
+
     @Override
     public void componentInitializer() {
         this.sidePanel.init();

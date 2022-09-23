@@ -18,6 +18,8 @@ object MainGScreen {
 class MainGScreen(val header: String) extends GMainFrame(header) {
   final private val mainBlock = new MainBlock
 
+
+
   override def postConst() = {
     this.add(this.mainBlock)
   }

@@ -17,6 +17,7 @@ class IntroGScreen(name:String) extends MonoGFrame(name:String) {
   private val  westPanel : GPanel = new IntroWestPanel(this)
    private val mainPanel : GPanel = new IntroMainPanel
 
+
   
   {
     this.setDefaultCloseOperation(3)

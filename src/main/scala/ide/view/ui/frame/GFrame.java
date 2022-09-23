@@ -1,11 +1,12 @@
 package az.rock.ide.view.ui.frame;
 
 import az.rock.ide.engine.concretes.task.ChildProcess;
+import az.rock.ide.engine.concretes.task.Process;
 import az.rock.ide.view.page.screen.Loadable;
 import javax.swing.*;
 import java.awt.event.*;
 
-public abstract class GFrame extends JFrame implements ActionListener, Compiler, Loadable , ChildProcess {
+public abstract class GFrame extends JFrame implements ActionListener, Compiler, Loadable   {
     
 
     {
@@ -62,10 +63,7 @@ public abstract class GFrame extends JFrame implements ActionListener, Compiler,
         super(header);
     }
 
-    @Override
-    public void disposeProcess() {
-        super.dispose();
-    }
+
 
     @Override
     public void compile() {
