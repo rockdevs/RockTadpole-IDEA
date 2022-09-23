@@ -1,5 +1,6 @@
 package az.rock.ide.view.ui.frame;
 
+import az.rock.ide.common.log.Logger;
 import az.rock.ide.engine.container.ProcessContainer;
 import az.rock.ide.engine.container.model.PrimaryProcessModel;
 import az.rock.ide.engine.container.model.SecondaryProcessModel;
@@ -24,12 +25,28 @@ public abstract class GSecondaryProcessFrame extends GFrame implements Secondary
     }
 
     @Override
-    public void disposeProcess() {
-
+    public void compile() {
+        super.compile();
+        this.drive();
     }
 
     @Override
-    public void drive() {
-
+    public void dispose() {
+        super.dispose();
+        this.disposeProcess();
     }
+
+
+
+    @Override
+    public void drive() {
+        Logger.spec("SecondaryProcessModel (Parent : ".concat(this.processModel.getParentUUID().toString()).concat(") with UUID").concat(this.processModel.getUuid()).concat(" is driving"));
+    }
+
+    @Override
+    public void disposeProcess() {
+        Logger.spec("SecondaryProcessModel (Parent : ".concat(this.processModel.getParentUUID().toString()).concat(") with UUID").concat(this.processModel.getUuid()).concat(" disposed"));
+    }
+
+
 }
