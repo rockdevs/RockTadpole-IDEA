@@ -2,6 +2,7 @@ package az.rock.ide.engine.concretes;
 
 import az.rock.ide.engine.abstracts.RockApplication;
 import az.rock.ide.engine.concretes.task.ViewProvider;
+import az.rock.ide.view.page.screen.intro.IntroGScreen;
 import az.rock.ide.view.ui.frame.Compiler;
 import az.rock.ide.view.page.screen.SplashGScreen;
 import az.rock.ide.view.page.screen.main.MainGScreen;
@@ -27,14 +28,14 @@ public class RunnableApplication implements RockApplication {
     private final List<Callable<Boolean>> callables = new ArrayList<>();
 
     private final SplashGScreen splashGScreen = this.screenFactory.factorySplashGScreen();
-    private final MainSettingsGFrame introGScreen = new MainSettingsGFrame();
+    private final IntroGScreen introGScreen = new IntroGScreen("Open Project");
 
     private final Callable<Boolean> mainCallable = ()->{
-        Thread.sleep(1000);
-        Stream.of(new MainGScreen("RockTadpole-IDEA"))
-                .forEach(Compiler::compile);
+        Thread.sleep(300);
+        Stream.of(new MainGScreen("RockTadpole-IDEA")).forEach(Compiler::compile);
         return true;
     };
+
     {
         callables.add(mainCallable);
     }
@@ -42,16 +43,6 @@ public class RunnableApplication implements RockApplication {
     private final Runnable runnableSplash = this.splashGScreen::compile;
     private final Runnable runnableIntroScreen = this.introGScreen::compile;
 
-//    @Override
-//    public void run(String... args) {
-//        try {
-//            Thread introThread = new Thread(runnableIntroScreen);
-//            introThread.start();
-//        } catch (Exception  e) {
-//            e.printStackTrace();
-//            JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application  Exception");
-//        }
-//    }
 
     @Override
     public void run(String... args) {
@@ -62,10 +53,16 @@ public class RunnableApplication implements RockApplication {
             List<Future<Boolean>> tasks = this.executorService.invokeAll(callables);
             for (Future<Boolean> result: tasks)
                 if (!result.get()) taskResult = false;
-            if (taskResult) splashTread.interrupt();
+            if (taskResult) {
+                this.introGScreen.dispose();
+                splashTread.interrupt();
+            };
         } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application  Exception");
+            System.exit(0);
         }
     }
+
+
 }
