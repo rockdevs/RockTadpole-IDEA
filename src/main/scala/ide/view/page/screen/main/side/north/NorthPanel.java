@@ -1,6 +1,6 @@
 package az.rock.ide.view.page.screen.main.side.north;
 
-import az.rock.ide.engine.task.Initializer;
+import az.rock.ide.engine.task.GComponentInitializer;
 import az.rock.ide.view.ui.panel.GSidePanel;
 
 import java.awt.*;
@@ -24,6 +24,6 @@ public class NorthPanel extends GSidePanel {
     @Override
     public void componentInitializer() {
         Stream.of(this.navBar)
-                .forEach(Initializer::init);
+                .forEach(GComponentInitializer::init);
     }
 }

@@ -1,11 +1,13 @@
 package az.rock.ide.view.ui.frame;
 
 import az.rock.ide.engine.container.ProcessContainer;
-import az.rock.ide.engine.container.driven.PrimaryProcess;
+import az.rock.ide.engine.container.process.PrimaryProcess;
 import az.rock.ide.engine.container.model.PrimaryProcessModel;
+import lombok.Getter;
 
+@Getter
 public abstract class GPrimaryProcessFrame extends GFrame implements PrimaryProcess {
-    private PrimaryProcessModel superProcessModel;
+    private PrimaryProcessModel processModel;
     
     public GPrimaryProcessFrame(){
         super();
@@ -13,8 +15,8 @@ public abstract class GPrimaryProcessFrame extends GFrame implements PrimaryProc
 
     public GPrimaryProcessFrame(String header){
         super(header);
-        superProcessModel = PrimaryProcessModel.buildProcess(this);
-        ProcessContainer.register(this.superProcessModel);
+        processModel = PrimaryProcessModel.buildProcessModel(this);
+        ProcessContainer.register(processModel);
     }
 
     @Override

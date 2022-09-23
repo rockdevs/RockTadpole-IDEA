@@ -1,6 +1,6 @@
 package az.rock.ide.view.ui.panel;
 
-import az.rock.ide.engine.task.Initializer;
+import az.rock.ide.engine.task.GComponentInitializer;
 import az.rock.ide.common.log.Logger;
 import az.rock.ide.view.page.screen.Loadable;
 import az.rock.ide.butterfly.model.DataObject;
@@ -10,7 +10,7 @@ import javax.swing.event.AncestorEvent;
 import javax.swing.event.AncestorListener;
 import java.awt.event.*;
 
-public abstract class GPanel extends JPanel implements Initializer, Loadable ,ActionListener,GResponse<DataObject>{
+public abstract class GPanel extends JPanel implements GComponentInitializer, Loadable ,ActionListener,GResponse<DataObject>{
     public GPanel(){
         this.setVisible(true);
     }

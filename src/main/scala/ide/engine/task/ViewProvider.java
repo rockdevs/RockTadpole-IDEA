@@ -4,7 +4,7 @@ import com.formdev.flatlaf.FlatDarculaLaf;
 
 import javax.swing.*;
 
-public class ViewProvider implements Initializer{
+public class ViewProvider implements GComponentInitializer {
     public static void postViewDefaultInitializer(){
         try {
             UIManager.setLookAndFeel(new FlatDarculaLaf());

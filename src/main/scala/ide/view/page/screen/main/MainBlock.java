@@ -1,6 +1,6 @@
 package az.rock.ide.view.page.screen.main;
 
-import az.rock.ide.engine.task.Initializer;
+import az.rock.ide.engine.task.GComponentInitializer;
 import az.rock.ide.view.ui.panel.GPanel;
 import az.rock.ide.view.page.screen.main.central.CentralPanel;
 import az.rock.ide.view.page.screen.main.side.south.SouthPanel;
@@ -39,6 +39,6 @@ public class MainBlock extends GPanel {
     @Override
     public void componentInitializer() {
         Stream.of(northPanel,southPanel,eastPanel,westPanel,centralPanel)
-                .forEach(Initializer::init);
+                .forEach(GComponentInitializer::init);
     }
 }

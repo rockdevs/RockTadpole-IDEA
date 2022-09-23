@@ -4,6 +4,8 @@ import az.rock.ide.common.log.Logger;
 import az.rock.ide.engine.container.model.SecondaryProcessModel;
 import az.rock.ide.engine.container.model.PrimaryProcessModel;
 import az.rock.ide.engine.container.model.ProcessModel;
+import az.rock.ide.view.ui.frame.GPrimaryProcessFrame;
+import az.rock.ide.view.ui.frame.GSecondaryProcessFrame;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,26 +19,26 @@ public class ProcessContainer {
 
     public static PrimaryProcessModel findPrimaryProcessModelWithUUID(UUID uuid){
         var optionalValue = PROCESS_MODEL_CONTAINER.stream().filter(processModel -> processModel.match(uuid)).findFirst();
-        return optionalValue.isPresent()?optionalValue.get():null;
+        return optionalValue.isPresent()?(PrimaryProcessModel)optionalValue.get():null;
     }
 
 
 
 
-    public  static void register(PrimaryProcessModel process){
-        Logger.spec("Register PrimaryProcessModel with UUID :".concat(process.getUuid()));
+    public  static void register(PrimaryProcessModel primaryProcessModel){
+        Logger.spec("Register PrimaryProcessModel with UUID :".concat(primaryProcessModel.getUuid()));
     }
 
-    public  static void register(SecondaryProcessModel process){
-
+    public  static void register(SecondaryProcessModel secondaryProcessModel){
+        Logger.spec("Register SecondaryProcessModel with UUID :".concat(secondaryProcessModel.getUuid()));
     }
 
-    public static void dispose(PrimaryProcessModel process){
-        Logger.spec("Dispose PrimaryProcessModel with UUID :".concat(process.getUuid()));
+    public static void dispose(PrimaryProcessModel primaryProcessModel){
+        Logger.spec("Dispose PrimaryProcessModel with UUID :".concat(primaryProcessModel.getUuid()));
     }
 
-    public static void dispose(SecondaryProcessModel process){
-
+    public static void dispose(SecondaryProcessModel secondaryProcessModel){
+        Logger.spec("Dispose SecondaryProcessModel with UUID :".concat(secondaryProcessModel.getUuid()));
     }
 
 }

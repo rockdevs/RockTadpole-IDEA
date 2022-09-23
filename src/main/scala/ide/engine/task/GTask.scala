@@ -1,6 +1,6 @@
 package az.rock
 package ide.engine.task
 
-trait JTask {
+trait GTask {
   def start():Unit;
 }

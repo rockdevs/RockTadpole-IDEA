@@ -1,12 +1,9 @@
 package az.rock.ide.engine.container.model;
 
 import az.rock.ide.common.log.Logger;
-import az.rock.ide.engine.container.ProcessContainer;
-import az.rock.ide.engine.container.driven.SecondaryProcess;
+import az.rock.ide.engine.container.process.SecondaryProcess;
 import lombok.Getter;
 
-import java.util.HashSet;
-import java.util.Set;
 import java.util.UUID;
 
 @Getter
