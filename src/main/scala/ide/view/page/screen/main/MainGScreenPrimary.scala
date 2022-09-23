@@ -38,4 +38,6 @@ class MainGScreenPrimary(val header: String) extends GMainFrame(header) {
   override def actionPerformed(e: ActionEvent): Unit = {
 
   }
+
+  override def getFrameName: String = "MainGScreenPrimary"
 }

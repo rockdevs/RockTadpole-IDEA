@@ -96,4 +96,8 @@ public class SplashGScreen extends GSplashFrame implements Process {
         return transparentPanel;
     }
 
+    @Override
+    public String getFrameName() {
+        return "SplashScreen";
+    }
 }

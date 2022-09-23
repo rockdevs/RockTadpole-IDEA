@@ -19,51 +19,51 @@ public abstract class GPanel extends JPanel implements GComponentInitializer, Lo
         this.addAncestorListener(new AncestorListener() {
             @Override
             public void ancestorAdded(AncestorEvent event) {
-                Logger.info(event);
+                //Logger.info(event);
             }
 
             @Override
             public void ancestorRemoved(AncestorEvent event) {
-                Logger.info(event);
+                //Logger.info(event);
             }
 
             @Override
             public void ancestorMoved(AncestorEvent event) {
-                Logger.info(event);
+                //Logger.info(event);
             }
         });
 
         this.addComponentListener(new ComponentListener() {
             @Override
             public void componentResized(ComponentEvent e) {
-                Logger.info(e);
+                //Logger.info(e);
             }
 
             @Override
             public void componentMoved(ComponentEvent e) {
-                Logger.info(e);
+                //Logger.info(e);
             }
 
             @Override
             public void componentShown(ComponentEvent e) {
-                Logger.info(e);
+                //Logger.info(e);
             }
 
             @Override
             public void componentHidden(ComponentEvent e) {
-                Logger.info(e);
+                //Logger.info(e);
             }
         });
 
         this.addContainerListener(new ContainerListener() {
             @Override
             public void componentAdded(ContainerEvent e) {
-                Logger.info(e);
+                //Logger.info(e);
             }
 
             @Override
             public void componentRemoved(ContainerEvent e) {
-                Logger.info(e);
+                //Logger.info(e);
             }
         });
     }

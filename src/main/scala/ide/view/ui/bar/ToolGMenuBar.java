@@ -4,6 +4,7 @@ import az.rock.ide.view.page.screen.intro.IntroGScreenPrimary;
 import az.rock.ide.view.page.screen.toolBar.file.newFile.NewProjectFrame;
 import az.rock.ide.view.ui.factory.abstracts.AbstractBarFactory;
 import az.rock.ide.view.ui.factory.concretes.BarFactory;
+import az.rock.ide.view.ui.frame.GPrimaryProcessFrame;
 import az.rock.ide.view.ui.icon.enums.GIconBar;
 
 import java.awt.event.ActionEvent;
@@ -11,7 +12,10 @@ import java.awt.event.ActionListener;
 import java.util.stream.Stream;
 
 public class ToolGMenuBar extends GMenuBar {
+
     private final AbstractBarFactory barFactory = new BarFactory();
+    private final GPrimaryProcessFrame primaryProcessFrame;
+
 
     //BasMenuBar
     private final GMenu fileMenu = barFactory.factoryGMenu("File");
@@ -75,6 +79,11 @@ public class ToolGMenuBar extends GMenuBar {
                 .forEach(this.viewMenu::add);
     }
 
+    public ToolGMenuBar(GPrimaryProcessFrame primaryProcessFrame){
+        super(primaryProcessFrame);
+        this.primaryProcessFrame = primaryProcessFrame;
+    }
+
     @Override
     public void postConst() {
         this.openItem.addActionListener(new ActionListener() {
@@ -87,7 +96,7 @@ public class ToolGMenuBar extends GMenuBar {
         this.newItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new NewProjectFrame("New Project").compile();
+                new NewProjectFrame(primaryProcessFrame,"New Project").compile();
             }
         });
     }

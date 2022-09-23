@@ -2,23 +2,26 @@ package az.rock.ide.view.ui.frame;
 
 import az.rock.ide.common.log.Logger;
 import az.rock.ide.engine.container.ProcessContainer;
-import az.rock.ide.engine.container.process.PrimaryProcess;
 import az.rock.ide.engine.container.model.PrimaryProcessModel;
+import az.rock.ide.engine.container.process.PrimaryProcess;
 import lombok.Getter;
 
+import java.awt.*;
+import java.awt.geom.RoundRectangle2D;
+
 @Getter
-public abstract class GPrimaryProcessFrame extends GFrame implements PrimaryProcess {
+public abstract class GPrimaryProcessWindow extends GWindow implements PrimaryProcess {
     private String frameName = "{Empty}";
     private PrimaryProcessModel processModel;
-    
-    public GPrimaryProcessFrame(){
-        super();
-    }
 
-    public GPrimaryProcessFrame(String header){
-        super(header);
+    public GPrimaryProcessWindow() {
+        super();
         processModel = PrimaryProcessModel.buildProcessModel(this);
         ProcessContainer.register(processModel);
+        this.setSize(800,500);
+        this.setLocationRelativeTo(null);
+        this.getContentPane().setBackground(Color.DARK_GRAY);
+        this.setShape(new RoundRectangle2D.Double(0, 0, 800, 400, 50, 50));
     }
 
     @Override
@@ -46,10 +49,11 @@ public abstract class GPrimaryProcessFrame extends GFrame implements PrimaryProc
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof GPrimaryProcessFrame frame){
+        if (obj instanceof GPrimaryProcessWindow frame){
             return frame.processModel.getUuid().equals(this.processModel.getUuid());
         }
         return false;
     }
+    
     
 }

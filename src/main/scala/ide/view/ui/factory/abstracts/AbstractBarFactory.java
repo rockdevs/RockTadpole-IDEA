@@ -6,6 +6,7 @@ import az.rock.ide.view.ui.bar.GMenu;
 import az.rock.ide.view.ui.bar.GMenuItem;
 import az.rock.ide.view.ui.bar.LargeGMenuItem;
 import az.rock.ide.view.ui.bar.ListGMenuItem;
+import az.rock.ide.view.ui.frame.GPrimaryProcessFrame;
 import az.rock.ide.view.ui.icon.enums.GIconBar;
 
 import javax.swing.*;
@@ -13,7 +14,7 @@ import javax.swing.*;
 @Factory
 public interface AbstractBarFactory {
 
-    ToolGMenuBar factoryToolGMenuBar(String context);
+    ToolGMenuBar factoryToolGMenuBar(GPrimaryProcessFrame primaryProcessFrame, String context);
 
     GMenu factoryGMenu(String context);
 

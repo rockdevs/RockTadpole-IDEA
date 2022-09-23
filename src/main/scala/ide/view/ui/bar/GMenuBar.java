@@ -4,8 +4,10 @@ import az.rock.ide.engine.task.GComponentInitializer;
 
 import javax.swing.*;
 import az.rock.ide.view.page.screen.Loadable;
+import az.rock.ide.view.ui.frame.GPrimaryProcessFrame;
+
 public abstract  class GMenuBar extends JMenuBar implements GComponentInitializer, Loadable {
-    public GMenuBar(){
+    public GMenuBar(GPrimaryProcessFrame primaryProcessFrame){
         super();
     }
 

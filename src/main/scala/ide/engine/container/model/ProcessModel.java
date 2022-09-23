@@ -16,7 +16,7 @@ public abstract class ProcessModel {
 
     public ProcessModel(){
         this.uuid = UUID.randomUUID();
-        Logger.spec("ProcessModel was initialized with ID : ".concat(this.getUuid().toString()));
+        Logger.spec("ProcessModel was initialized with UUID : ".concat(this.getUuid().toString()));
     }
 
     public final Boolean match(UUID uuid) {

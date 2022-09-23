@@ -42,4 +42,6 @@ class IntroGScreenPrimary(name:String) extends MonoGFrame(name:String) {
   override def actionPerformed(e: ActionEvent): Unit = {
 
   }
+
+  override def getFrameName: String = "IntroGScreen"
 }

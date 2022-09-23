@@ -3,6 +3,8 @@ package az.rock.ide.view.page.screen.toolBar.file.newFile;
 
 import az.rock.ide.butterfly.abst.AbstractNewProjectViewToModelButterfly;
 import az.rock.ide.butterfly.conc.NewProjectViewToModelButterfly;
+import az.rock.ide.view.ui.frame.GPrimaryProcessFrame;
+import az.rock.ide.view.ui.frame.GSecondaryProcessFrame;
 import az.rock.ide.view.ui.panel.GAccordionPanel;
 import az.rock.ide.view.ui.panel.GPanel;
 import az.rock.ide.view.ui.panel.GSimplePanel;
@@ -28,8 +30,7 @@ import java.util.List;
 
 @Data
 @Getter
-public class NewProjectFrame extends MonoGFrame  {
-
+public class NewProjectFrame extends GSecondaryProcessFrame {
     private final AbstractNewProjectViewToModelButterfly newProjectViewToModelButterfly = new NewProjectViewToModelButterfly();
 
     private JPanel buttonPanel  = new GSimplePanel();
@@ -43,6 +44,12 @@ public class NewProjectFrame extends MonoGFrame  {
     private final List<GPanel> panelList = new ArrayList<>();
 
     {
+        super.setSize(new Dimension(700,600));
+        super.setLayout(new BorderLayout());
+        super.setLocationRelativeTo(null);
+    }
+
+    {
         this.panelList.add(new PrimaryInnerPanel());
         this.panelList.add(new SecondaryInnerPanel());
         this.currentMainPanel = this.panelList.get(0);
@@ -54,8 +61,8 @@ public class NewProjectFrame extends MonoGFrame  {
     }
 
 
-    public NewProjectFrame(String name){
-        super(name);
+    public NewProjectFrame(GPrimaryProcessFrame primaryProcessFrame, String name){
+        super(primaryProcessFrame,name);
     }
 
 
@@ -101,6 +108,11 @@ public class NewProjectFrame extends MonoGFrame  {
     public void setCurrentMainPanel(GPanel panel){
         this.currentMainPanel = panel;
         this.switchNextStepButton(panel);
+    }
+
+    @Override
+    public String getFrameName() {
+        return "{NewProjectFrame}";
     }
 }
 

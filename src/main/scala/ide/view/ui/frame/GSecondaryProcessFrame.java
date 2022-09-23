@@ -11,6 +11,7 @@ import java.util.UUID;
 
 @Getter
 public abstract class GSecondaryProcessFrame extends GFrame implements SecondaryProcess {
+    private String frameName = "{Empty}";
     private SecondaryProcessModel processModel;
 
     public GSecondaryProcessFrame(){
@@ -40,13 +41,19 @@ public abstract class GSecondaryProcessFrame extends GFrame implements Secondary
 
     @Override
     public void drive() {
-        Logger.spec("SecondaryProcessModel (Parent : ".concat(this.processModel.getParentUUID().toString()).concat(") with UUID").concat(this.processModel.getUuid()).concat(" is driving"));
+        Logger.spec("SecondaryProcessModel Name -> "+getFrameName()+" (Parent : ".concat(this.processModel.getParentUUID().toString()).concat(") with UUID ").concat(this.processModel.getUuid()).concat(" is driving"));
     }
 
     @Override
     public void disposeProcess() {
-        Logger.spec("SecondaryProcessModel (Parent : ".concat(this.processModel.getParentUUID().toString()).concat(") with UUID").concat(this.processModel.getUuid()).concat(" disposed"));
+        Logger.spec("SecondaryProcessModel Name -> "+getFrameName()+" (Parent : ".concat(this.processModel.getParentUUID().toString()).concat(") with UUID ").concat(this.processModel.getUuid()).concat(" disposed"));
     }
 
-
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof GSecondaryProcessFrame frame){
+            return frame.processModel.getUuid().equals(this.processModel.getUuid());
+        }
+        return false;
+    }
 }

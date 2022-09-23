@@ -6,6 +6,7 @@ import az.rock.ide.view.ui.bar.GMenuItem;
 import az.rock.ide.view.ui.bar.LargeGMenuItem;
 import az.rock.ide.view.ui.bar.ListGMenuItem;
 import az.rock.ide.view.ui.factory.abstracts.AbstractBarFactory;
+import az.rock.ide.view.ui.frame.GPrimaryProcessFrame;
 import az.rock.ide.view.ui.icon.enums.GIconBar;
 import az.rock.ide.view.util.ImageProvider;
 
@@ -15,8 +16,8 @@ import java.util.Objects;
 public class BarFactory implements AbstractBarFactory {
 
     @Override
-    public ToolGMenuBar factoryToolGMenuBar(String context){
-        return new ToolGMenuBar();
+    public ToolGMenuBar factoryToolGMenuBar(GPrimaryProcessFrame primaryProcessFrame,String context){
+        return new ToolGMenuBar(primaryProcessFrame);
     }
     @Override
     public GMenu factoryGMenu(String context){
