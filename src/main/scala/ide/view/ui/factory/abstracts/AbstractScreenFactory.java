@@ -4,6 +4,6 @@ import az.rock.ide.view.page.screen.main.*;
 import az.rock.ide.view.page.screen.SplashGScreen;
 
 public  abstract class AbstractScreenFactory {
-    public abstract MainGScreen factoryMainGScreen();
+    public abstract MainGScreenPrimary factoryMainGScreen();
     public abstract SplashGScreen factorySplashGScreen();
 }

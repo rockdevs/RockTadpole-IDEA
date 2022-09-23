@@ -1,7 +1,5 @@
 package az.rock.ide.view.ui.frame;
 
-import az.rock.ide.engine.concretes.task.ChildProcess;
-import az.rock.ide.engine.concretes.task.Process;
 import az.rock.ide.view.page.screen.Loadable;
 import javax.swing.*;
 import java.awt.event.*;

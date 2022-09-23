@@ -1,6 +1,6 @@
 package az.rock.ide.view.ui.bar;
 
-import az.rock.ide.engine.concretes.task.Initializer;
+import az.rock.ide.engine.task.Initializer;
 
 import javax.swing.*;
 import az.rock.ide.view.page.screen.Loadable;

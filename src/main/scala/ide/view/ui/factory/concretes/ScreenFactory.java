@@ -7,8 +7,8 @@ public class ScreenFactory extends AbstractScreenFactory {
 
 
     @Override
-    public MainGScreen factoryMainGScreen() {
-        return new MainGScreen("Rock IDEA");
+    public MainGScreenPrimary factoryMainGScreen() {
+        return new MainGScreenPrimary("Rock IDEA");
     }
 
 

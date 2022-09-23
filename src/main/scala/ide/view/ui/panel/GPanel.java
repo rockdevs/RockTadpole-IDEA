@@ -1,6 +1,6 @@
 package az.rock.ide.view.ui.panel;
 
-import az.rock.ide.engine.concretes.task.Initializer;
+import az.rock.ide.engine.task.Initializer;
 import az.rock.ide.common.log.Logger;
 import az.rock.ide.view.page.screen.Loadable;
 import az.rock.ide.butterfly.model.DataObject;

@@ -4,7 +4,7 @@ import az.rock.ide.view.ui.bar.ToolGMenuBar;
 
 import java.awt.*;
 
-public abstract class GMainFrame extends GProcessFrame {
+public abstract class GMainFrame extends GPrimaryProcessFrame {
 
     private final ToolGMenuBar toolGMenuBar = new ToolGMenuBar();
 

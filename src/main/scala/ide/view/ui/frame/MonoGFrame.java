@@ -1,8 +1,7 @@
 package az.rock.ide.view.ui.frame;
 
-import javax.swing.*;
 import java.awt.*;
-public abstract class MonoGFrame extends GProcessFrame{
+public abstract class MonoGFrame extends GPrimaryProcessFrame {
 
     {
         super.setSize(new Dimension(700,600));
