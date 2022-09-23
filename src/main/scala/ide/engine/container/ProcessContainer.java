@@ -10,9 +10,6 @@ import java.util.List;
 public class ProcessContainer {
     
     private static final List<ProcessModel> PROCESS_MODEL_CONTAINER = new ArrayList<>();
-
-    
-    
     
     
     public  static void register(PrimaryProcessModel process){
@@ -25,6 +22,10 @@ public class ProcessContainer {
 
     public static void dispose(PrimaryProcessModel process){
         
+    }
+
+    public static void dispose(SecondaryProcessModel process){
+
     }
 
     private static PrimaryProcessModel findParentProcessModel(SecondaryProcessModel subProcessModel){

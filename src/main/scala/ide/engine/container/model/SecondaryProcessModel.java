@@ -9,7 +9,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @Getter
-public class SecondaryProcessModel extends ProcessModel {
+public final class SecondaryProcessModel extends ProcessModel<SecondaryProcessModel> {
     private UUID primaryUUID;
     private SecondaryProcess secondaryProcess;
 
@@ -28,16 +28,16 @@ public class SecondaryProcessModel extends ProcessModel {
 
     @Override
     public void appendSecondaryProcess(SecondaryProcess secondaryProcess) {
-        
+
     }
 
     @Override
     public void removeSecondaryProcess(SecondaryProcess secondaryProcess) {
-        
+
     }
 
     @Override
     public void clear(SecondaryProcess secondaryProcess) {
-        
+
     }
 }

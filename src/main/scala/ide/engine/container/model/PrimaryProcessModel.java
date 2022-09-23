@@ -10,9 +10,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Getter
-public class PrimaryProcessModel extends ProcessModel{
+public final class PrimaryProcessModel extends ProcessModel<SecondaryProcessModel>{
     private PrimaryProcess primaryProcess;
-    
 
     private PrimaryProcessModel(Process process){
         super();
