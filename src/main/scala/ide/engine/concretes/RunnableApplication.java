@@ -1,6 +1,7 @@
 package az.rock.ide.engine.concretes;
 
 import az.rock.ide.engine.abstracts.RockApplication;
+import az.rock.ide.engine.concretes.task.ViewProvider;
 import az.rock.ide.view.ui.frame.Compiler;
 import az.rock.ide.view.page.screen.SplashGScreen;
 import az.rock.ide.view.page.screen.main.MainGScreen;
@@ -16,15 +17,13 @@ import java.util.stream.Stream;
 
 public class RunnableApplication implements RockApplication {
     static {
-        try {
-            UIManager.setLookAndFeel(new FlatDarculaLaf());
-        } catch (UnsupportedLookAndFeelException e) {
-            JOptionPane.showMessageDialog(new JFrame("Error")," There was exception while initialize windows");
-        }
+        ViewProvider.postViewDefaultInitializer();
     }
     
     private final AbstractScreenFactory screenFactory = new ScreenFactory();
+    
     private final ExecutorService executorService =  Executors.newFixedThreadPool(5);
+    
     private final List<Callable<Boolean>> callables = new ArrayList<>();
 
     private final SplashGScreen splashGScreen = this.screenFactory.factorySplashGScreen();

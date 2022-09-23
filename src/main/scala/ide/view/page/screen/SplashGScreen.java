@@ -1,5 +1,6 @@
 package az.rock.ide.view.page.screen;
 
+import az.rock.ide.engine.concretes.task.Process;
 import az.rock.ide.view.ui.panel.PicPanel;
 import az.rock.ide.view.ui.panel.TransparentPanel;
 import az.rock.ide.view.ui.frame.GSplashFrame;
@@ -9,7 +10,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.stream.IntStream;
 
-public class SplashGScreen extends GSplashFrame {
+public class SplashGScreen extends GSplashFrame implements Process {
     private final Image image = ImageProvider.getImage("src/main/scala/ide/view/ui/icon/png/RR.png",new Dimension(50,50));
     private final PicPanel mainPanel = new PicPanel("src/main/scala/ide/view/ui/icon/png/splash.png");
     private JProgressBar jProgressBar = new JProgressBar();
@@ -25,6 +26,11 @@ public class SplashGScreen extends GSplashFrame {
         });
     };
 
+    @Override
+    public void drive() {
+        
+        
+    }
 
     @Override
     public void postConst() {
