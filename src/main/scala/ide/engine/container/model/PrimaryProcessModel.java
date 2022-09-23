@@ -8,33 +8,37 @@ import lombok.Getter;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 @Getter
-public final class PrimaryProcessModel extends ProcessModel<SecondaryProcessModel>{
+public final class PrimaryProcessModel extends ProcessModel{
     private PrimaryProcess primaryProcess;
 
-    private PrimaryProcessModel(Process process){
+    private PrimaryProcessModel(Process primaryProcess){
         super();
-        this.process = process;
+        this.primaryProcess = primaryProcess;
     }
 
 
     public static PrimaryProcessModel buildProcess(Process process){
-        return new PrimaryProcessModel(process);
+        PrimaryProcessModel primaryProcessModel = new PrimaryProcessModel(process);
+        return primaryProcessModel;
     }
 
+    
+    
     @Override
     public void appendSecondaryProcess(SecondaryProcess secondaryProcess) {
-        
+        Logger.spec("Append SecondaryProcess on PrimaryProcess with UUID :".concat(super.getUuid().toString()));
     }
 
     @Override
     public void removeSecondaryProcess(SecondaryProcess secondaryProcess) {
-        
+        Logger.spec("Remove SecondaryProcess on PrimaryProcess with UUID :".concat(super.getUuid().toString()));
     }
 
     @Override
-    public void clear(SecondaryProcess secondaryProcess) {
-        
+    public void clear() {
+        Logger.spec("Clear All SecondaryProcesses on PrimaryProcess with UUID :".concat(super.getUuid().toString()));
     }
 }
