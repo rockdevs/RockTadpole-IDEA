@@ -11,6 +11,8 @@ public class Logger {
                 )
         );
     }
+    
+    
 
     public static void error(AWTError event){
 
@@ -23,6 +25,14 @@ public class Logger {
     public static void spec(String specialText){
         System.out.println(ConsoleColor.RESET.getColor() +
                         ConsoleColor.CYAN.getColor() + "[LOG SPEC  " + new Date().toString() + " ] : -> ".concat(
+                        ConsoleColor.WHITE.getColor() + specialText
+                )
+        );
+    }
+
+    public static void throwSpec(String specialText){
+        System.out.println(ConsoleColor.RESET.getColor() +
+                        ConsoleColor.RED.getColor() + "[LOG SPEC  " + new Date().toString() + " ] : -> ".concat(
                         ConsoleColor.WHITE.getColor() + specialText
                 )
         );
