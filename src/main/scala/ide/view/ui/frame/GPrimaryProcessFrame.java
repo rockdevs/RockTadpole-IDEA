@@ -51,5 +51,8 @@ public abstract class GPrimaryProcessFrame extends GFrame implements PrimaryProc
         }
         return false;
     }
-    
+
+    public String getFrameName() {
+        return frameName;
+    }
 }

@@ -3,20 +3,15 @@ package az.rock.ide.view.page.screen.toolBar.file.newFile;
 
 import az.rock.ide.butterfly.abst.AbstractNewProjectViewToModelButterfly;
 import az.rock.ide.butterfly.conc.NewProjectViewToModelButterfly;
-import az.rock.ide.view.ui.frame.GPrimaryProcessFrame;
-import az.rock.ide.view.ui.frame.GSecondaryProcessFrame;
-import az.rock.ide.view.ui.panel.GAccordionPanel;
-import az.rock.ide.view.ui.panel.GPanel;
-import az.rock.ide.view.ui.panel.GSimplePanel;
+import az.rock.ide.view.ui.frame.*;
+import az.rock.ide.view.ui.panel.*;
 import az.rock.ide.view.page.screen.intro.IntroWestPanel;
 import az.rock.ide.butterfly.model.DataObject;
 import az.rock.ide.view.ui.combo.GComboBox;
 import az.rock.ide.view.ui.fileChooser.GFileChooserPanel;
-import az.rock.ide.view.ui.panel.ValidableInnerGPanel;
-import az.rock.ide.view.ui.textField.GLabelTextFiled;
-import az.rock.ide.view.ui.frame.MonoGFrame;
+import az.rock.ide.view.ui.panel.*;
 import az.rock.ide.view.ui.button.*;
-import az.rock.ide.view.ui.textField.GTextField;
+import az.rock.ide.view.ui.textField.*;
 import lombok.Data;
 import lombok.Getter;
 import net.miginfocom.swing.MigLayout;
@@ -32,6 +27,8 @@ import java.util.List;
 @Getter
 public class NewProjectFrame extends GSecondaryProcessFrame {
     private final AbstractNewProjectViewToModelButterfly newProjectViewToModelButterfly = new NewProjectViewToModelButterfly();
+
+    private IntroWestPanel introWestPanel;
 
     private JPanel buttonPanel  = new GSimplePanel();
     private GButton nextButton = new GSimpleButton("Next");
@@ -83,7 +80,8 @@ public class NewProjectFrame extends GSecondaryProcessFrame {
 
     @Override
     public void postConst() {
-        this.add(new IntroWestPanel(this),BorderLayout.WEST);
+        this.introWestPanel = new IntroWestPanel(this);
+        this.add(introWestPanel,BorderLayout.WEST);
         this.add(this.getPanelList().get(0),BorderLayout.CENTER);
         this.add(this.buttonPanel,BorderLayout.SOUTH);
 
@@ -99,6 +97,7 @@ public class NewProjectFrame extends GSecondaryProcessFrame {
     @Override
     public void componentInitializer() {
         this.getPanelList().get(0).init();
+        this.introWestPanel.init();
     }
 
     public GPanel getCurrentPanel(){
