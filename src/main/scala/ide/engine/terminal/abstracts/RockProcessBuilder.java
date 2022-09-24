@@ -1,8 +1,8 @@
-package az.rock.ide.engine.appRunner.abstracts;
+package az.rock.ide.engine.terminal.abstracts;
 
-import az.rock.ide.engine.appRunner.OSPropertyProvider;
-import az.rock.ide.engine.appRunner.concretes.service.MacCommandService;
-import az.rock.ide.engine.appRunner.concretes.service.WindowsCommandService;
+import az.rock.ide.engine.terminal.OSPropertyProvider;
+import az.rock.ide.engine.terminal.concretes.service.MacCommandService;
+import az.rock.ide.engine.terminal.concretes.service.WindowsCommandService;
 
 import java.util.HashMap;
 import java.util.Map;

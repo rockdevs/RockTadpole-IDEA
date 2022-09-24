@@ -1,6 +1,6 @@
 package az.rock.ide.view.ui.frame;
 
-import az.rock.ide.view.page.screen.Loadable;
+import az.rock.ide.view.ui.Loadable;
 import javax.swing.*;
 import java.awt.event.*;
 

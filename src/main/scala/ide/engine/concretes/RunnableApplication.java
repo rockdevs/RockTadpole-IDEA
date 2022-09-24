@@ -1,7 +1,8 @@
 package az.rock.ide.engine.concretes;
 
 import az.rock.ide.engine.abstracts.RockApplication;
-import az.rock.ide.engine.task.ViewProvider;
+import az.rock.ide.engine.setting.SettingsProvider;
+import az.rock.ide.engine.theme.ViewProvider;
 import az.rock.ide.view.page.screen.intro.IntroGScreenPrimary;
 import az.rock.ide.view.ui.frame.Compiler;
 import az.rock.ide.view.page.screen.SplashGScreen;
@@ -16,6 +17,9 @@ import java.util.concurrent.*;
 import java.util.stream.Stream;
 
 public class RunnableApplication implements RockApplication {
+    private static final SettingsProvider settingsProvider = new SettingsProvider();
+    private static final TaskProvider taskProvider = new TaskProvider();
+
     static {
         ViewProvider.postViewDefaultInitializer();
     }

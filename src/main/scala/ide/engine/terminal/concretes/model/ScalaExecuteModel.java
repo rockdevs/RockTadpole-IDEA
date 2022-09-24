@@ -1,6 +1,6 @@
-package az.rock.ide.engine.appRunner.concretes.model;
+package az.rock.ide.engine.terminal.concretes.model;
 
-import az.rock.ide.engine.appRunner.abstracts.ExecuteModel;
+import az.rock.ide.engine.terminal.abstracts.ExecuteModel;
 
 import java.util.Map;
 

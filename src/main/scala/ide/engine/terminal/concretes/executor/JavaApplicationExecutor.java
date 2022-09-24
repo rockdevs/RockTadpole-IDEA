@@ -1,10 +1,10 @@
-package az.rock.ide.engine.appRunner.concretes.executor;
+package az.rock.ide.engine.terminal.concretes.executor;
 
 import az.rock.ide.common.log.Logger;
-import az.rock.ide.engine.appRunner.abstracts.ApplicationExecutor;
-import az.rock.ide.engine.appRunner.abstracts.CommandService;
-import az.rock.ide.engine.appRunner.abstracts.RockProcessBuilder;
-import az.rock.ide.engine.appRunner.concretes.model.JavaExecuteModel;
+import az.rock.ide.engine.terminal.abstracts.ApplicationExecutor;
+import az.rock.ide.engine.terminal.abstracts.CommandService;
+import az.rock.ide.engine.terminal.abstracts.RockProcessBuilder;
+import az.rock.ide.engine.terminal.concretes.model.JavaExecuteModel;
 
 import java.lang.reflect.Constructor;
 

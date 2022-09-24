@@ -1,6 +1,6 @@
-package az.rock.ide.engine.appRunner.abstracts;
+package az.rock.ide.engine.terminal.abstracts;
 
-import az.rock.ide.engine.appRunner.OSPropertyProvider;
+import az.rock.ide.engine.terminal.OSPropertyProvider;
 import lombok.Getter;
 import lombok.Setter;
 

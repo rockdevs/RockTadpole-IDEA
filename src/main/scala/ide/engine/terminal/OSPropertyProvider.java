@@ -1,4 +1,4 @@
-package az.rock.ide.engine.appRunner;
+package az.rock.ide.engine.terminal;
 
 import lombok.Getter;
 

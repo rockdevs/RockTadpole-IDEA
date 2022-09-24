@@ -1,6 +1,6 @@
 package az.rock.ide.view.page.screen.main.central;
 
-import az.rock.ide.engine.task.GComponentInitializer;
+import az.rock.ide.view.ui.GComponentInitializer;
 import az.rock.ide.view.ui.panel.GPanel;
 
 import javax.swing.*;

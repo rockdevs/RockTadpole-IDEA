@@ -1,8 +1,8 @@
 package az.rock
-package ide.engine.task
+package ide.view.ui
 
 @FunctionalInterface trait GComponentInitializer {
-  def init() : Unit
+  def init(): Unit
 
   def init[T](args: T*) = {
   }

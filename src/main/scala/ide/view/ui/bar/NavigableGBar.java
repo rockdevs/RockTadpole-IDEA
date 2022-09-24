@@ -1,7 +1,7 @@
 package az.rock.ide.view.ui.bar;
 
-import az.rock.ide.engine.task.GComponentInitializer;
-import az.rock.ide.view.page.screen.Loadable;
+import az.rock.ide.view.ui.GComponentInitializer;
+import az.rock.ide.view.ui.Loadable;
 import javax.swing.*;
 
 public abstract class NavigableGBar extends JToolBar implements GComponentInitializer, Loadable {

@@ -1,9 +1,9 @@
 package az.rock.ide.view.ui.bar;
 
-import az.rock.ide.engine.task.GComponentInitializer;
+import az.rock.ide.view.ui.GComponentInitializer;
 
 import javax.swing.*;
-import az.rock.ide.view.page.screen.Loadable;
+import az.rock.ide.view.ui.Loadable;
 import az.rock.ide.view.ui.frame.GPrimaryProcessFrame;
 
 public abstract  class GMenuBar extends JMenuBar implements GComponentInitializer, Loadable {
