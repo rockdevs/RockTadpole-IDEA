@@ -49,18 +49,10 @@ public class RunnableApplication implements RockApplication {
 
     @Override
     public void run(String... args) {
-        Thread splashTread = new Thread(runnableIntroScreen);
-        splashTread.start();
         try {
-            boolean taskResult = true;
-            List<Future<Boolean>> tasks = this.executorService.invokeAll(callables);
-            for (Future<Boolean> result: tasks)
-                if (!result.get()) taskResult = false;
-            if (taskResult) {
-                //this.introGScreen.dispose();
-                //splashTread.interrupt();
-            };
-        } catch (ExecutionException | InterruptedException e) {
+            Thread splashTread = new Thread(runnableIntroScreen);
+            splashTread.start();
+        } catch (Exception  e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application  Exception");
             System.exit(0);

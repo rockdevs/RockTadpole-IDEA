@@ -4,7 +4,7 @@ import java.awt.*;
 public abstract class MonoGFrame extends GPrimaryProcessFrame {
 
     {
-        super.setSize(new Dimension(700,600));
+        super.setSize(new Dimension(900,700));
         super.setLayout(new BorderLayout());
         super.setLocationRelativeTo(null);
     }

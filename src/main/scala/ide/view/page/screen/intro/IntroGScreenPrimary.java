@@ -1,6 +1,5 @@
 package az.rock.ide.view.page.screen.intro;
 
-import az.rock.ide.view.page.screen.toolBar.file.newFile.NewWestPanel;
 import az.rock.ide.view.ui.frame.MonoGFrame;
 import az.rock.ide.view.ui.panel.GPanel;
 
@@ -10,8 +9,8 @@ import java.awt.event.ActionEvent;
 public class IntroGScreenPrimary extends MonoGFrame {
 
 
-    private final GPanel westPanel = new IntroWestPanel(this);
-    private final GPanel mainPanel = new IntroMailPanel();
+    private final GPanel westPanel = new IntroSidePanel(this);
+    private final GPanel mainPanel = new IntroProjectPanel();
 
     {
         this.setDefaultCloseOperation(3);

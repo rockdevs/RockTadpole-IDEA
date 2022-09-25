@@ -50,7 +50,8 @@ public enum GIconBar {
     FORCE_REFRESH("src/main/scala/ide/view/ui/icon/png/forceRefresh_dark.png"),
     SETTINGS("src/main/scala/ide/view/ui/icon/png/settings.png"),
     FOLDER("src/main/scala/ide/view/ui/icon/png/folder.png"),
-    COMPILER("src/main/scala/ide/view/ui/icon/png/compiledClassesFolder.png")
+    COMPILER("src/main/scala/ide/view/ui/icon/png/compiledClassesFolder.png"),
+    SEARCH("src/main/scala/ide/view/ui/icon/png/search.png")
     ;
 
     private final String path;
