@@ -5,11 +5,9 @@ import az.rock.ide.butterfly.abst.AbstractNewProjectViewToModelButterfly;
 import az.rock.ide.butterfly.conc.NewProjectViewToModelButterfly;
 import az.rock.ide.view.ui.frame.*;
 import az.rock.ide.view.ui.panel.*;
-import az.rock.ide.view.page.screen.intro.IntroWestPanel;
 import az.rock.ide.butterfly.model.DataObject;
 import az.rock.ide.view.ui.combo.GComboBox;
 import az.rock.ide.view.ui.fileChooser.GFileChooserPanel;
-import az.rock.ide.view.ui.panel.*;
 import az.rock.ide.view.ui.button.*;
 import az.rock.ide.view.ui.textField.*;
 import lombok.Data;
@@ -28,7 +26,7 @@ import java.util.List;
 public class NewProjectFrame extends GSecondaryProcessFrame {
     private final AbstractNewProjectViewToModelButterfly newProjectViewToModelButterfly = new NewProjectViewToModelButterfly();
 
-    private IntroWestPanel introWestPanel;
+    private NewWestPanel newWestPanel;
 
     private JPanel buttonPanel  = new GSimplePanel();
     private GButton nextButton = new GSimpleButton("Next");
@@ -80,8 +78,8 @@ public class NewProjectFrame extends GSecondaryProcessFrame {
 
     @Override
     public void postConst() {
-        this.introWestPanel = new IntroWestPanel(this);
-        this.add(introWestPanel,BorderLayout.WEST);
+        this.newWestPanel = new NewWestPanel(this);
+        this.add(newWestPanel,BorderLayout.WEST);
         this.add(this.getPanelList().get(0),BorderLayout.CENTER);
         this.add(this.buttonPanel,BorderLayout.SOUTH);
 
@@ -97,7 +95,7 @@ public class NewProjectFrame extends GSecondaryProcessFrame {
     @Override
     public void componentInitializer() {
         this.getPanelList().get(0).init();
-        this.introWestPanel.init();
+        this.newWestPanel.init();
     }
 
     public GPanel getCurrentPanel(){

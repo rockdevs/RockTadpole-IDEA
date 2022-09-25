@@ -35,7 +35,7 @@ public class RunnableApplication implements RockApplication {
 
     private final Callable<Boolean> mainCallable = ()->{
         Thread.sleep(300);
-        Stream.of(new MainGScreenPrimary("RockTadpole-IDEA")).forEach(Compiler::compile);
+        Stream.of(introGScreen).forEach(Compiler::compile);
         return true;
     };
 
@@ -49,7 +49,7 @@ public class RunnableApplication implements RockApplication {
 
     @Override
     public void run(String... args) {
-        Thread splashTread = new Thread(runnableSplash);
+        Thread splashTread = new Thread(runnableIntroScreen);
         splashTread.start();
         try {
             boolean taskResult = true;
@@ -57,8 +57,8 @@ public class RunnableApplication implements RockApplication {
             for (Future<Boolean> result: tasks)
                 if (!result.get()) taskResult = false;
             if (taskResult) {
-                this.introGScreen.dispose();
-                splashTread.interrupt();
+                //this.introGScreen.dispose();
+                //splashTread.interrupt();
             };
         } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();

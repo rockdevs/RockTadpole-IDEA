@@ -1,5 +1,6 @@
 package az.rock.ide.view.page.screen.intro;
 
+import az.rock.ide.view.page.screen.toolBar.file.newFile.NewWestPanel;
 import az.rock.ide.view.ui.frame.MonoGFrame;
 import az.rock.ide.view.ui.panel.GPanel;
 
