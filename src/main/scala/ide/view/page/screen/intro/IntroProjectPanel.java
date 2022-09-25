@@ -4,6 +4,7 @@ import az.rock.ide.view.ui.StaticUIFrame;
 import az.rock.ide.view.ui.button.GButton;
 import az.rock.ide.view.ui.button.GSimpleButton;
 import az.rock.ide.view.ui.button.GSquareButton;
+import az.rock.ide.view.ui.fileChooser.GFileChooserPanel;
 import az.rock.ide.view.ui.icon.enums.GIconBar;
 import az.rock.ide.view.ui.panel.GSimplePanel;
 import net.miginfocom.swing.MigLayout;
@@ -14,11 +15,13 @@ import java.awt.*;
 public class IntroProjectPanel extends GSimplePanel{
     private final GSimplePanel topPanel = new TopPanel();
     private final GSimplePanel centerPanel = new IntroFreePanel();
+    private final ProjectBottomPanel projectBottomPanel  = new ProjectBottomPanel();
 
     public IntroProjectPanel(){
         this.setLayout(new BorderLayout());
         this.add(this.topPanel,BorderLayout.NORTH);
         this.add(this.centerPanel,BorderLayout.CENTER);
+        this.add(this.projectBottomPanel,BorderLayout.SOUTH);
         this.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
     }
 
@@ -84,5 +87,19 @@ public class IntroProjectPanel extends GSimplePanel{
         }
     }
 
+    class ProjectBottomPanel extends GSimplePanel{
+        private final GFileChooserPanel changeWorkSpace = new GFileChooserPanel(this);
+        private final GButton refreshWorkSpaceButton = new GSimpleButton(GIconBar.RESTART);
+
+        {
+            changeWorkSpace.setButtonText("Change Workspace");
+        }
+
+        public ProjectBottomPanel(){
+            this.setLayout(new BorderLayout());
+            this.add(this.refreshWorkSpaceButton,BorderLayout.WEST);
+            this.add(this.changeWorkSpace,BorderLayout.CENTER);
+        }
+    }
 
 }

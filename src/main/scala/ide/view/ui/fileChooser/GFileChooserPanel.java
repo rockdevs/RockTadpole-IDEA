@@ -10,6 +10,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.util.Objects;
 
 public class GFileChooserPanel extends GSimplePanel {
     private final JPanel parent;
@@ -27,8 +29,9 @@ public class GFileChooserPanel extends GSimplePanel {
         this.selectLocation.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int result = fileChooser.showOpenDialog(parent);
-                textField.setText(fileChooser.getSelectedFile().getAbsolutePath());
+                int result = fileChooser.showOpenDialog(null);
+                File file = fileChooser.getSelectedFile();
+                textField.setText(Objects.nonNull(file) ? file.getPath() : "");
             }
         });
     }
@@ -36,5 +39,9 @@ public class GFileChooserPanel extends GSimplePanel {
     public GFileChooserPanel(JPanel parent){
         this.parent=parent;
         this.fileChooser = new GFileChooser(parent);
+    }
+
+    public void setButtonText(String text){
+        this.selectLocation.setText(text);
     }
 }

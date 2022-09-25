@@ -2,9 +2,7 @@ package az.rock.ide.view.page.screen.intro;
 
 import az.rock.ide.engine.ApplicationProperty;
 import az.rock.ide.view.ui.StaticUIFrame;
-import az.rock.ide.view.ui.button.GButton;
-import az.rock.ide.view.ui.button.GSimpleButton;
-import az.rock.ide.view.ui.button.GUnborderPanelButton;
+import az.rock.ide.view.ui.button.*;
 import az.rock.ide.view.ui.frame.GPrimaryProcessFrame;
 import az.rock.ide.view.ui.icon.enums.GIconBar;
 import az.rock.ide.view.ui.panel.GSimplePanel;
@@ -17,12 +15,9 @@ import java.awt.*;
 public class IntroSidePanel extends GSimplePanel {
     private final GPrimaryProcessFrame primaryProcessFrame;
 
-
     private final GSimplePanel iconPanel = new IconPanel();
     private final GSimplePanel centerButtonPanel = new CenterButtonPanel();
     private final GSimplePanel bottomPanel = new BottonPanel();
-
-
 
     public IntroSidePanel(GPrimaryProcessFrame processFrame){
         this.primaryProcessFrame = processFrame;
@@ -77,18 +72,29 @@ public class IntroSidePanel extends GSimplePanel {
     }
 
 
-
     class BottonPanel extends GSimplePanel{
         private GButton settingsButton = new GSimpleButton(GIconBar.SETTINGS);
+        private GButton updateButton = new GSimpleButton(GIconBar.UPDATE);
+        private final GSimplePanel simplePanel = new GSimplePanel();
+        {
+            this.simplePanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+            this.simplePanel.setBackground(StaticUIFrame.getPanelBakground().darker());
+        }
+
         private final JLabel rockDevs_company = new JLabel("Copyright © 2021-2022 Rock s.r.o.  ");
+
         {
             settingsButton.setBackground(StaticUIFrame.getPanelBakground().darker());
+            updateButton.setBackground(StaticUIFrame.getPanelBakground().darker());
             rockDevs_company.setFont(new Font("Helvetica", Font.PLAIN, 10));
             rockDevs_company.setForeground(Color.lightGray);
         }
+
         public BottonPanel(){
             this.setLayout(new BorderLayout());
-            this.add(this.settingsButton,BorderLayout.WEST);
+            this.simplePanel.add(this.settingsButton);
+            this.simplePanel.add(this.updateButton);
+            this.add(this.simplePanel,BorderLayout.WEST);
             this.add(rockDevs_company,BorderLayout.EAST);
 
             this.setBackground(StaticUIFrame.getPanelBakground().darker());
@@ -101,13 +107,18 @@ public class IntroSidePanel extends GSimplePanel {
         private final MigLayout migLayout  = new MigLayout("fillx");
         private GButton projectButton = new GUnborderPanelButton("Projects");
         private GButton learnButton = new GUnborderPanelButton("Learn RockTadpole");
+        private GButton gitRepoButton = new GUnborderPanelButton("Git Repository");
+        private GButton marketButton = new GUnborderPanelButton("RockMarket");
         private GButton donateButton = new GUnborderPanelButton("Donate");
 
         public CenterButtonPanel(){
             this.setLayout(this.migLayout);
             this.add(projectButton,"grow,span");
             this.add(learnButton,"grow,span");
+            this.add(gitRepoButton,"grow,span");
+            this.add(marketButton,"grow,span");
             this.add(this.donateButton,"grow, span");
+
             this.setBackground(StaticUIFrame.getPanelBakground().darker());
         }
     }
