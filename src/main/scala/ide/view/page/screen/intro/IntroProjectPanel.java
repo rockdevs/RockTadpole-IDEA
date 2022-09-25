@@ -1,5 +1,6 @@
 package az.rock.ide.view.page.screen.intro;
 
+import az.rock.ide.view.ui.StaticUIFrame;
 import az.rock.ide.view.ui.button.GButton;
 import az.rock.ide.view.ui.button.GSimpleButton;
 import az.rock.ide.view.ui.button.GSquareButton;
@@ -18,6 +19,7 @@ public class IntroProjectPanel extends GSimplePanel{
         this.setLayout(new BorderLayout());
         this.add(this.topPanel,BorderLayout.NORTH);
         this.add(this.centerPanel,BorderLayout.CENTER);
+        this.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
     }
 
     @Override
