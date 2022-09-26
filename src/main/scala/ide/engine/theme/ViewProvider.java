@@ -10,7 +10,7 @@ import javax.swing.*;
 public class ViewProvider {
     public static void postViewDefaultInitializer(){
         try {
-            UIManager.setLookAndFeel(Theme.ARC_DARK_ORANGE.get());
+            UIManager.setLookAndFeel(Theme.GITHUB_DARK_CONTRAST.get());
         } catch (UnsupportedLookAndFeelException e) {
             JOptionPane.showMessageDialog(new JFrame("Error")," There was exception while initialize windows");
         }

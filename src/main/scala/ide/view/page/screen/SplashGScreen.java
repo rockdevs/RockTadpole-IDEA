@@ -26,16 +26,7 @@ public class SplashGScreen extends GSplashFrame implements Process {
         });
     };
 
-    @Override
-    public void drive() {
-        
-        
-    }
 
-    @Override
-    public void disposeProcess() {
-
-    }
 
     @Override
     public void postConst() {
