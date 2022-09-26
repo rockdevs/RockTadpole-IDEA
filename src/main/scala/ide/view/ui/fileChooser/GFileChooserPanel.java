@@ -44,4 +44,8 @@ public class GFileChooserPanel extends GSimplePanel {
     public void setButtonText(String text){
         this.selectLocation.setText(text);
     }
+
+    public String getWrokspaceDirectory() {
+        return textField.getText();
+    }
 }

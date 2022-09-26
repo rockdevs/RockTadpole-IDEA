@@ -9,8 +9,8 @@ import java.util.UUID;
 @Getter
 public class ProjectModel {
     private String projectName = "";
-    private final File directory;
-    private final ApplicationExecutor applicationExecutor;
+    private File directory;
+    private ApplicationExecutor applicationExecutor;
     //FRAME CONTAINER FRAME UUID
     private UUID processUUID;
 
@@ -20,6 +20,7 @@ public class ProjectModel {
         this.applicationExecutor = executor;
     }
 
+    public ProjectModel(){}
     public void setProcessUUID(UUID processUUID) {
         this.processUUID = processUUID;
     }

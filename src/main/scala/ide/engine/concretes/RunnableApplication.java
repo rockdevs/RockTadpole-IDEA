@@ -1,6 +1,7 @@
 package az.rock.ide.engine.concretes;
 
 import az.rock.ide.engine.abstracts.RockApplication;
+import az.rock.ide.engine.project.ProjectModel;
 import az.rock.ide.engine.setting.SettingsProvider;
 import az.rock.ide.engine.theme.ViewProvider;
 import az.rock.ide.view.page.screen.intro.IntroGScreenPrimary;
@@ -31,8 +32,8 @@ public class RunnableApplication implements RockApplication {
     private final List<Callable<Boolean>> callables = new ArrayList<>();
 
     private final SplashGScreen splashGScreen = this.screenFactory.factorySplashGScreen();
-    private final IntroGScreenPrimary introGScreen = new IntroGScreenPrimary("Open Project");
-
+    //private final IntroGScreenPrimary introGScreen = new IntroGScreenPrimary("Open Project");
+    private final MainGScreenPrimary introGScreen = new MainGScreenPrimary(new ProjectModel());
     private final Callable<Boolean> mainCallable = ()->{
         Thread.sleep(300);
         Stream.of(introGScreen).forEach(Compiler::compile);
