@@ -24,14 +24,16 @@ import java.util.stream.Collectors;
 @SuperComponent
 public class IntroProjectPanel extends GSimplePanel{
 
-    private final ProjectPanelMemento projectPanelMemento = new ProjectPanelMemento();
+    private ProjectPanelMemento projectPanelMemento;
 
     private final JScrollPane scrollPane;
 
-    private final GSimplePanel topPanel = new TopPanel();
-    private final GSimplePanel centerPanel = new IntroProjectLisstPanel();
+    private final TopPanel topPanel = new TopPanel();
+    private final IntroProjectLisstPanel centerPanel = new IntroProjectLisstPanel();
     private final ProjectBottomPanel projectBottomPanel  = new ProjectBottomPanel();
-
+    {
+        this.projectBottomPanel = new ProjectBottomPanel(topPanel,centerPanel,projectBottomPanel);
+    }
     {
         this.scrollPane =  new JScrollPane(centerPanel);
         this.scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
@@ -234,4 +236,5 @@ class ProjectItemModel{
 @Getter
 class ProjectPanelMemento extends GMemento {
     private final ProjectPanelModel projectPanelModel = new ProjectPanelModel();
+
 }
