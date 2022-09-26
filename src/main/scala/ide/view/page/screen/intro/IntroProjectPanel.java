@@ -6,6 +6,7 @@ import az.rock.ide.view.ui.button.GSimpleButton;
 import az.rock.ide.view.ui.button.GUnborderSimpleButton;
 import az.rock.ide.view.ui.fileChooser.GFileChooserPanel;
 import az.rock.ide.view.ui.icon.enums.GIconBar;
+import az.rock.ide.view.ui.panel.GRoundedPanel;
 import az.rock.ide.view.ui.panel.GSimplePanel;
 import az.rock.ide.view.util.ImageProvider;
 import net.miginfocom.swing.MigLayout;
@@ -18,14 +19,20 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class IntroProjectPanel extends GSimplePanel{
+
+    private final JScrollPane scrollPane;
+
     private final GSimplePanel topPanel = new TopPanel();
     private final GSimplePanel centerPanel = new IntroProjectLisstPanel();
     private final ProjectBottomPanel projectBottomPanel  = new ProjectBottomPanel();
 
     public IntroProjectPanel(){
+        this.scrollPane =  new JScrollPane(centerPanel);
+        this.scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        this.scrollPane.setBorder(BorderFactory.createEmptyBorder());
         this.setLayout(new BorderLayout());
         this.add(this.topPanel,BorderLayout.NORTH);
-        this.add(this.centerPanel,BorderLayout.CENTER);
+        this.add(this.scrollPane,BorderLayout.CENTER);
         this.add(this.projectBottomPanel,BorderLayout.SOUTH);
         this.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
     }
@@ -102,8 +109,6 @@ public class IntroProjectPanel extends GSimplePanel{
             this.projectItems.add(new ProjectItem());
             this.projectItems.add(new ProjectItem());
             this.projectItems.add(new ProjectItem());
-            this.projectItems.add(new ProjectItem());
-            this.projectItems.add(new ProjectItem());
         }
 
         public IntroProjectLisstPanel(){
@@ -117,7 +122,7 @@ public class IntroProjectPanel extends GSimplePanel{
     }
 
 
-    class ProjectItem extends GSimplePanel {
+    class ProjectItem extends GRoundedPanel {
         private final File file = null;
         private final JLabel directoryLabel = new JLabel("C/User/Workspace/");
         {

@@ -2,9 +2,12 @@ package az.rock.ide.view.page.screen.intro;
 
 import az.rock.ide.view.ui.frame.MonoGFrame;
 import az.rock.ide.view.ui.panel.GPanel;
+import az.rock.ide.view.ui.panel.GSimplePanel;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.geom.RoundRectangle2D;
 
 public class IntroGScreenPrimary extends MonoGFrame {
 
@@ -14,6 +17,7 @@ public class IntroGScreenPrimary extends MonoGFrame {
 
     {
         this.setDefaultCloseOperation(3);
+
     }
 
     public IntroGScreenPrimary(String header){
